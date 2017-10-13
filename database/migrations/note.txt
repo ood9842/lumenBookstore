@@ -1,0 +1,7 @@
+php shell
+
+create table
+php artisan make:migrations table_name
+
+push all table in migrations floder
+php artisan migrate
