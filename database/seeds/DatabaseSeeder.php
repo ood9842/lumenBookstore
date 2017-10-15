@@ -16,6 +16,7 @@ class DatabaseSeeder extends Seeder
          //$this->call('Data_Stocks');
          //$this->call('Data_Stores');
          //$this->call('Data_Customers');
-         $this->call('Data_Employees');
+         //$this->call('Data_Employees');
+         $this->call('Data_Managers');
     }
 }
