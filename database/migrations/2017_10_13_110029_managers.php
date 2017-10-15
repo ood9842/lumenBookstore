@@ -13,7 +13,7 @@ class Managers extends Migration
      */
     public function up()
     {
-      Schema::create('manager', function(Blueprint $table){
+      Schema::create('managers', function(Blueprint $table){
         $table->string('staff_id', 9);
         $table->string('store_manageON', 9);
 
