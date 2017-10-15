@@ -11,7 +11,6 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-         $this->call('book');
-         $this->call('publicher');
+         $this->call('Data_Persons');
     }
 }

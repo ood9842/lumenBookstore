@@ -11,6 +11,22 @@
 |
 */
 
+use App\presons;
+use App\customers;
+use App\staffs;
+
 $router->get('/', function () use ($router) {
     return $router->app->version();
+});
+
+$router->get('/Staffs', function(){
+    $staffs=Staff::all();
+
+    return $staffs;
+});
+
+$router->get('/Customers', function(){
+    $customers::all();
+
+    return $customers;
 });
