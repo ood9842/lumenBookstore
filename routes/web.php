@@ -11,22 +11,51 @@
 |
 */
 
-use App\presons;
-use App\customers;
-use App\staffs;
+use App\Persons;
+use App\Customers;
+use App\Staffs;
 
 $router->get('/', function () use ($router) {
     return $router->app->version();
 });
 
-$router->get('/Staffs', function(){
-    $staffs=Staff::all();
+//CRUD person
+$router->get('/persons', function(){
+    $persons=Persons::all();
 
-    return $staffs;
+    return $persons;
 });
 
-$router->get('/Customers', function(){
-    $customers::all();
+$router->get('/person/{P_id}', function($P_id){
+    $person=Persons::findOrFail($P_id);
+
+    return $person;
+});
+
+//tidy_access_count
+$router->get('/persons', function(){
+    $persons=Persons::all();
+
+    return $persons;
+});
+
+//CRUD Customer
+$router->get('/customers', function(){
+    $customers=Customers::all();
 
     return $customers;
+});
+
+$router->get('/customer/{C_id}', function($C_id){
+    $customer=Customers::findOrFail($C_id);
+
+    return $customer;
+});
+
+$router->get('/customer/{C_id}/getname', function($C_id){
+    $customer=Customers::findOrFail($C_id);
+    $person=$customer->person;
+    var_dump($person);
+    //echo $person->first_name;
+    //echo $person->last_name;
 });
