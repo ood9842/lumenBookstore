@@ -113,7 +113,7 @@ class Data_Books extends Seeder
         ]);
 
         DB::table('books')->insert([
-            'Book_id'=>'978-3-598-21504-9',
+            'Book_id'=>'978-3-598-21510-9',
             'Book_name'=>'BOOK11',
             'type'=>'Fiction',
             'edition'=>'8',
@@ -123,7 +123,7 @@ class Data_Books extends Seeder
         ]);
 
         DB::table('books')->insert([
-            'Book_id'=>'978-3-598-21500-1',
+            'Book_id'=>'978-3-598-21511-1',
             'Book_name'=>'BOOK12',
             'type'=>'Fiction',
             'edition'=>'7',
@@ -133,7 +133,7 @@ class Data_Books extends Seeder
         ]);
 
         DB::table('books')->insert([
-            'Book_id'=>'978-3-598-21501-8',
+            'Book_id'=>'978-3-598-21512-8',
             'Book_name'=>'BOOK13',
             'type'=>'General',
             'edition'=>'7',
@@ -143,7 +143,7 @@ class Data_Books extends Seeder
         ]);
 
         DB::table('books')->insert([
-            'Book_id'=>'978-3-598-21502-5',
+            'Book_id'=>'978-3-598-21513-5',
             'Book_name'=>'BOOK14',
             'type'=>'Education',
             'edition'=>'4',
@@ -153,7 +153,7 @@ class Data_Books extends Seeder
         ]);
 
         DB::table('books')->insert([
-            'Book_id'=>'978-3-598-21503-2',
+            'Book_id'=>'978-3-598-21514-2',
             'Book_name'=>'BOOK15',
             'type'=>'Education',
             'edition'=>'1',
