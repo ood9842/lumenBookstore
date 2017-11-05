@@ -15,7 +15,7 @@ class Customers extends Model
 //relation
     public function person()
     {
-        return $this->belongsTo('App\Persons');
+        return $this->belongsTo('App\Persons', 'P_id');
     }
 
     /*public function member()

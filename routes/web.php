@@ -54,8 +54,10 @@ $router->get('/customer/{C_id}', function($C_id){
 
 $router->get('/customer/{C_id}/getname', function($C_id){
     $customer=Customers::findOrFail($C_id);
-    $person=$customer->person;
-    var_dump($person);
+    //var_dump($customer);
+    $person=$customer->person();
+    echo $person;
+    //var_dump($person);
     //echo $person->first_name;
     //echo $person->last_name;
 });
