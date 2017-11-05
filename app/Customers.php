@@ -15,11 +15,17 @@ class Customers extends Model
 //relation
     public function person()
     {
-        return $this->belongsTo('App\Persons', 'P_id');
+        return $this->belongsTo('App\Persons');
     }
 
-    /*public function member()
+
+    public function membered()
     {
-        return $this->hasOne('App\Staffs');
-    }*/
+        return $this->hasMany('App\Stores');
+    }
+
+    public function buy()
+    {
+        return $this->hasMany('App\Sell_logs');
+    }
 }

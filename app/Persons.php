@@ -15,7 +15,7 @@ class Persons extends Model
 //relation
     public function customer()
     {
-        return $this->hasOne('App\Customers', 'C_id');
+        return $this->hasOne('App\Customers');
     }
 
     public function staff()
