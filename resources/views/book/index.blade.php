@@ -66,11 +66,12 @@ table.sortable thead {
             <th>{{$book->publisher_name}}</th>
             <th>{{$book->published_year}}</th>
             <th>{{$book->price}}</th>
+            <th><a href="/book/{{$book->Book_id}}">detail</a></th>
         </tr>
         @endforeach
       </table>
 
-        </a>
-
+      <!-- bottom to page create -->
+          <a href="/book/create">add book</a>
       </div>
 </html>

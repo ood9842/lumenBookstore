@@ -11,7 +11,6 @@
 |
 */
 
-use App\Books;
 use App\Book_in_stock;
 use App\Customers;
 use App\Employees;
@@ -33,16 +32,29 @@ $router->get('/', function () use ($router) {
     return $router->app->version();
 });
 
-//get value
-$router->get('/books', function(){
-    $books=Books::all();
-    return view('book', compact('books'));
-});
+//show book page
+$router->get('/books', 'BookController@index');//for admin
+$router->get('/book/{id}', 'BookController@detail');//for admin
+$router->get('/book/create', 'BookController@create');//for admin
+$router->get('/book/delete', 'BookController@delete');
 
-$router->get('/book_in_stock', function(){
-    $book_in_stock=Book_in_stock::all();
-    return $book_in_stock;
-});
+
+
+
+//show book in stock page
+$router->get('/book_in_stock', 'Book_in_stockController@index');//for admin
+
+
+
+
+
+
+
+
+
+
+
+
 
 $router->get('/customers', function(){
     $customers=Customers::all();
