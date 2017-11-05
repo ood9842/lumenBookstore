@@ -33,13 +33,14 @@ $router->get('/', function () use ($router) {
     return $router->app->version();
 });
 
+//get value
 $router->get('/books', function(){
     $books=Books::all();
-    return $books;
+    return view('book', compact('books'));
 });
 
 $router->get('/book_in_stock', function(){
-    $book_in_stock=Book_in_stock::all();//NOT DONE
+    $book_in_stock=Book_in_stock::all();
     return $book_in_stock;
 });
 
