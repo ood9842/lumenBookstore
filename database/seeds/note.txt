@@ -1,0 +1,7 @@
+php shell
+
+make seed
+php artisan make:seeder UsersTableSeeder
+
+push all data in seed floder to table
+php artisan db:seed

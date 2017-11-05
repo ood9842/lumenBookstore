@@ -15,13 +15,14 @@ class SupplyDetails extends Migration
     {
       Schema::create('supply_details', function(Blueprint $table){
         $table->string('slogs_id', 10);
-        $table->string('book_id', 6);
+        $table->string('book_id', 17);
         $table->string('book_name');
         $table->float('price')->unsigned();
         $table->integer('amount')->unsigned();
         $table->float('total_line');//เงินติดลบแสดงว่าซื้อ บวกแสดงว่าส่งคืน
 
         $table->foreign('slogs_id')->references('Slogs_id')->on('supply_logs');
+        $table->foreign('book_id')->references('Book_id')->on('books');
       });
     }
 

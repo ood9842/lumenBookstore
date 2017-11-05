@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class BookInStock extends Migration
+class BookInStocks extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,9 @@ class BookInStock extends Migration
      */
     public function up()
     {
-          Schema::create('book_in_stock', function(Blueprint $table){
+          Schema::create('book_in_stocks', function(Blueprint $table){
             $table->string('stock_id', 9);
-            $table->string('book_id', 6);
+            $table->string('book_id', 17);
             $table->integer('amount')->unsigned();
 
             $table->foreign('stock_id')->references('Stock_id')->on('stocks');

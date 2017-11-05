@@ -14,7 +14,7 @@ class Books extends Migration
     public function up()
     {
         Schema::create('books', function(Blueprint $table){
-          $table->string('Book_id', 6);
+          $table->string('Book_id', 17);
           $table->string('Book_name');
           $table->string('type'); //ตัวเลือกที่คิดไว้ทำในส่วน logical ในเว็ปเอง
           $table->integer('edition');

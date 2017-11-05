@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class StockKeeper extends Migration
+class StockKeepers extends Migration
 {
     /**
      * Run the migrations.
