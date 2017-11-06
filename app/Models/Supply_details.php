@@ -1,10 +1,10 @@
 <?php
 
-namespace App;
+namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Sell_details extends Model
+class Supply_details extends Model
 {
     /**
      * Get the phone record associated with the user.
@@ -12,14 +12,14 @@ class Sell_details extends Model
     public $incrementing=false;
 
 //relation
-    public function sell_log()
+    public function supply_log()
     {
-        return $this->belongsTo('App\Sell_logs');
+        return $this->belongsTo('App\Models\Supply_logs');
     }
 
     public function book()
     {
-        return $this->belongsTo('App\Books');
+        return $this->belongsTo('App\Models\Books');
     }
 
 }

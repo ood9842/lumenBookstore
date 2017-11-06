@@ -1,6 +1,6 @@
 <?php
 
-namespace App;
+namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
@@ -15,17 +15,17 @@ class Customers extends Model
 //relation
     public function person()
     {
-        return $this->belongsTo('App\Persons');
+        return $this->belongsTo('App\Models\Persons');
     }
 
 
     public function membered()
     {
-        return $this->hasMany('App\Stores');
+        return $this->hasMany('App\Models\Stores');
     }
 
     public function buy()
     {
-        return $this->hasMany('App\Sell_logs');
+        return $this->hasMany('App\Models\Sell_logs');
     }
 }

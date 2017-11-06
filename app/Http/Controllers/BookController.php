@@ -35,7 +35,9 @@ class BookController extends BaseController
       $book->type = $request->input('type');
       $book->edition = $request->input('edition');
       $book->publisher_name = $request->input('Pname');
+
       $book->published_year= $request->input('Pyear');
+
       $book->price = $request->input('price');
       $book->save();//store
 

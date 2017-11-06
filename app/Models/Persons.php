@@ -1,6 +1,6 @@
 <?php
 
-namespace App;
+namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
@@ -15,11 +15,11 @@ class Persons extends Model
 //relation
     public function customer()
     {
-        return $this->hasOne('App\Customers');
+        return $this->hasOne('App\Models\Customers');
     }
 
     public function staff()
     {
-        return $this->hasOne('App\Staffs');
+        return $this->hasOne('App\Models\Staffs');
     }
 }

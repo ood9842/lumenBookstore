@@ -1,25 +1,26 @@
 <?php
 
-namespace App;
+namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Managers extends Model
+class Employees extends Model
 {
     /**
      * Get the phone record associated with the user.
      */
-
     public $incrementing=false;
 
 //relation
     public function staff()
     {
-        return $this->belongsTo('App\Staffs');
+        return $this->belongsTo('App\Models\Staffs');
     }
 
-    public function manage()
+    public function work_on()
     {
-        return $this->belongsTo('App\Stores');
+          return $this->belongsTo('App\Models\Stores');
     }
+
+
 }

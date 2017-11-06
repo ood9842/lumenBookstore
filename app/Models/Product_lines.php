@@ -1,6 +1,6 @@
 <?php
 
-namespace App;
+namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
@@ -15,11 +15,11 @@ class Product_lines extends Model
 //relation
     public function published()
     {
-        return $this->belongsTo('App\Publishers');
+        return $this->belongsTo('App\Models\Publishers');
     }
 
     public function supply()
     {
-        return $this->hasMany('App\Supply_logs');
+        return $this->hasMany('App\Models\Supply_logs');
     }
 }

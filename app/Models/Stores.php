@@ -1,6 +1,6 @@
 <?php
 
-namespace App;
+namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
@@ -15,21 +15,21 @@ class Stores extends Model
 //relation
     public function employ()
     {
-        return $this->hasMany('App\Employees');
+        return $this->hasMany('App\Models\Employees');
     }
 
     public function manager()
     {
-        return $this->belongsTo('App\Managers');
+        return $this->belongsTo('App\Models\Managers');
     }
 
     public function members()
     {
-        return $this->belongsTo('App\Customers');
+        return $this->belongsTo('App\Models\Customers');
     }
 
     public function stock()
     {
-        return $this->hasOne('App\Stocks');
+        return $this->hasOne('App\Models\Stocks');
     }
 }
