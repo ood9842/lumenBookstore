@@ -21,8 +21,8 @@ class SellLogs extends Migration
         $table->float('total_payment');
 
         $table->primary('Sell_logs_id');
-        $table->foreign('customer_id')->references('C_id')->on('customers');//ซื้อของต่างสาขาได้ส่วนลด
-        $table->foreign('stock_id')->references('Stock_id')->on('stocks');
+        $table->foreign('customer_id')->references('C_id')->on('customers')->onDelete('cascade');;//ซื้อของต่างสาขาได้ส่วนลด
+        $table->foreign('stock_id')->references('Stock_id')->on('stocks')->onDelete('cascade');;
       });
     }
 

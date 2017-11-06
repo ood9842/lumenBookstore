@@ -21,7 +21,7 @@ class Staffs extends Migration
 
           $table->primary('S_id');
           $table->unique('person_id');
-          $table->foreign('person_id')->references('P_id')->on('persons');
+          $table->foreign('person_id')->references('P_id')->on('persons')->onDelete('cascade');;
         });
     }
 

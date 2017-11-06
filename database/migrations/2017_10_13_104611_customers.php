@@ -22,8 +22,8 @@ class Customers extends Migration
 
           $table->primary('C_id');
           $table->unique('person_id');
-          $table->foreign('person_id')->references('P_id')->on('persons');
-          $table->foreign('member_id')->references('Store_id')->on('stores');
+          $table->foreign('person_id')->references('P_id')->on('persons')->onDelete('cascade');;
+          $table->foreign('member_id')->references('Store_id')->on('stores')->onDelete('cascade');;
         });
     }
 

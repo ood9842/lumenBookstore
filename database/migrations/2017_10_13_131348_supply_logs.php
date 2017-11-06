@@ -22,8 +22,8 @@ class SupplyLogs extends Migration
         $table->boolean('sentOrback');
 
         $table->primary('Slogs_id');
-        $table->foreign('product_line_id')->references('Product_line_id')->on('product_lines');
-        $table->foreign('stock_id')->references('Stock_id')->on('stocks');
+        $table->foreign('product_line_id')->references('Product_line_id')->on('product_lines')->onDelete('cascade');;
+        $table->foreign('stock_id')->references('Stock_id')->on('stocks')->onDelete('cascade');;
       });
     }
 

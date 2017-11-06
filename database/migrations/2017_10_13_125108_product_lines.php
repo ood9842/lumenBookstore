@@ -18,7 +18,7 @@ class ProductLines extends Migration
         $table->string('publisher_id', 7);
 
         $table->primary('Product_line_id');
-        $table->foreign('publisher_id')->references('Publisher_id')->on('publishers');
+        $table->foreign('publisher_id')->references('Publisher_id')->on('publishers')->onDelete('cascade');;
       });
     }
 

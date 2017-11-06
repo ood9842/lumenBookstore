@@ -21,8 +21,8 @@ class SellDetails extends Migration
         $table->integer('amount')->unsigned();
         $table->float('total_line')->unsigned();
 
-        $table->foreign('sell_logs_id')->references('Sell_logs_id')->on('sell_logs');
-        $table->foreign('book_id')->references('Book_id')->on('books');
+        $table->foreign('sell_logs_id')->references('Sell_logs_id')->on('sell_logs')->onDelete('cascade');;
+        $table->foreign('book_id')->references('Book_id')->on('books')->onDelete('cascade');;
       });
     }
 

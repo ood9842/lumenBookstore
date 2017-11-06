@@ -21,8 +21,8 @@ class SupplyDetails extends Migration
         $table->integer('amount')->unsigned();
         $table->float('total_line');//เงินติดลบแสดงว่าซื้อ บวกแสดงว่าส่งคืน
 
-        $table->foreign('slogs_id')->references('Slogs_id')->on('supply_logs');
-        $table->foreign('book_id')->references('Book_id')->on('books');
+        $table->foreign('slogs_id')->references('Slogs_id')->on('supply_logs')->onDelete('cascade');;
+        $table->foreign('book_id')->references('Book_id')->on('books')->onDelete('cascade');;
       });
     }
 

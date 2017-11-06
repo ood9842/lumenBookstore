@@ -17,9 +17,9 @@ class StockKeepers extends Migration
         $table->string('staff_id', 9);
         $table->string('stock_workON', 9);
 
-        $table->foreign('stock_workON')->references('Stock_id')->on('stocks');
+        $table->foreign('stock_workON')->references('Stock_id')->on('stocks')->onDelete('cascade');;
         $table->unique('staff_id');
-        $table->foreign('staff_id')->references('S_id')->on('staffs');
+        $table->foreign('staff_id')->references('S_id')->on('staffs')->onDelete('cascade');;
       });
     }
 

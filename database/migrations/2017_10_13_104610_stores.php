@@ -20,7 +20,7 @@ class Stores extends Migration
 
           $table->primary('Store_id');
           $table->unique('stock_id');
-          $table->foreign('stock_id')->references('Stock_id')->on('stocks');
+          $table->foreign('stock_id')->references('Stock_id')->on('stocks')->onDelete('cascade');;
         });
     }
 

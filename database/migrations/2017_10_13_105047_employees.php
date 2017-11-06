@@ -17,9 +17,9 @@ class Employees extends Migration
           $table->string('staff_id', 9);
           $table->string('store_workON', 9);
 
-          $table->foreign('store_workON')->references('Store_id')->on('stores');
+          $table->foreign('store_workON')->references('Store_id')->on('stores')->onDelete('cascade');;
           $table->unique('staff_id');
-          $table->foreign('staff_id')->references('S_id')->on('staffs');
+          $table->foreign('staff_id')->references('S_id')->on('staffs')->onDelete('cascade');;
         });
     }
 

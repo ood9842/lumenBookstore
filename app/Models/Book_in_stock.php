@@ -9,9 +9,9 @@ class Book_in_stock extends Model
     /**
      * Get the phone record associated with the user.
      */
-
+    protected $table = 'book_in_stocks';
     public $incrementing=false;
-
+    public $timestamps = false;
 //relation
     public function stock()
     {
