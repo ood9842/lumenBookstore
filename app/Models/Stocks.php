@@ -1,6 +1,6 @@
 <?php
 
-namespace App;
+namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
@@ -15,26 +15,26 @@ class Stocks extends Model
 //relation
     public function store()
     {
-        return $this->belongsTo('App\Stores');
+        return $this->belongsTo('App\Models\Stores');
     }
 
     public function take_care_by()
     {
-        return $this->hasMany('App\Stock_keepers');
+        return $this->hasMany('App\Models\Stock_keepers');
     }
 
     public function sell()
     {
-        return $this->hasMany('App\Sell_logs');
+        return $this->hasMany('App\Models\Sell_logs');
     }
 
     public function supply()
     {
-        return $this->hasMany('App\Supply_logs');
+        return $this->hasMany('App\Models\Supply_logs');
     }
 
     public function stock()
     {
-        return $this->hasMany('App\Book_in_stock');
+        return $this->hasMany('App\Models\Book_in_stock');
     }
 }

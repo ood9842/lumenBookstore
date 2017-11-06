@@ -11,22 +11,22 @@
 |
 */
 
-use App\Books;
-use App\Book_in_stock;
-use App\Customers;
-use App\Employees;
-use App\Managers;
-use App\Persons;
-use App\Product_lines;
-use App\Publishers;
-use App\Sell_details;
-use App\Sell_logs;
-use App\Staffs;
-use App\Stock_keepers;
-use App\Stocks;
-use App\Stores;
-use App\Supply_details;
-use App\Supply_logs;
+use App\Models\Books;
+use App\Models\Book_in_stock;
+use App\Models\Customers;
+use App\Models\Employees;
+use App\Models\Managers;
+use App\Models\Persons;
+use App\Models\Product_lines;
+use App\Models\Publishers;
+use App\Models\Sell_details;
+use App\Models\Sell_logs;
+use App\Models\Staffs;
+use App\Models\Stock_keepers;
+use App\Models\Stocks;
+use App\Models\Stores;
+use App\Models\Supply_details;
+use App\Models\Supply_logs;
 
 
 $router->get('/', function () use ($router) {
@@ -34,6 +34,7 @@ $router->get('/', function () use ($router) {
 });
 
 //show book page
+
 $router->get('/books', 'BookController@index');//for admin
 $router->get('/book/{id}', 'BookController@read');//for admin
 $router->post('/book/create', 'BookController@create');//for admin

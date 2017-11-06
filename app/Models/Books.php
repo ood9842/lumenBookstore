@@ -1,6 +1,6 @@
 <?php
 
-namespace App;
+namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
@@ -10,22 +10,23 @@ class Books extends Model
      * Get the phone record associated with the user.
      */
     protected $primaryKey='Book_id';
+    protected $table='books';
     public $incrementing=false;
 
 //relation
     public function in_stock()
     {
-        return $this->hasMany('App\Book_in_stock');
+        return $this->hasMany('App\Models\Book_in_stock');
     }
 
     public function sell()
     {
-        return $this->hasMany('App\Sell_details');
+        return $this->hasMany('App\Models\Sell_details');
     }
 
     public function supply()
     {
-        return $this->hasMany('App\Supply_details');
+        return $this->hasMany('App\Models\Supply_details');
     }
 //
     public function create()

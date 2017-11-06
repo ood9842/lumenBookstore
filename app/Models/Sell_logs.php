@@ -1,6 +1,6 @@
 <?php
 
-namespace App;
+namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
@@ -15,16 +15,16 @@ class Sell_logs extends Model
 //relation
     public function bought()
     {
-        return $this->belongsTo('App\Customers');
+        return $this->belongsTo('App\Models\Customers');
     }
 
     public function stock()
     {
-        return $this->belongsTo('App\Stocks');
+        return $this->belongsTo('App\Models\Stocks');
     }
 
     public function details()
     {
-        return $this->hasMany('App\Sell_details');
+        return $this->hasMany('App\Models\Sell_details');
     }
 }

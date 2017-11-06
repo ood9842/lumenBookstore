@@ -1,6 +1,6 @@
 <?php
 
-namespace App;
+namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
@@ -15,7 +15,7 @@ class Publishers extends Model
 //relation
     public function product_line()
     {
-        return $this->hasOne('App\Product_lines');
+        return $this->hasOne('App\Models\Product_lines');
     }
 
 }
