@@ -27,5 +27,11 @@ class Books extends Model
     {
         return $this->hasMany('App\Supply_details');
     }
+//
+    public function create()
+    {
+      $Newtable = DB::table('books')->create();
+      return $Newtable;
+    }
 
 }

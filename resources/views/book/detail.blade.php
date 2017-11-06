@@ -78,6 +78,9 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
 
     </div>
     </div>
+    <!-- button delete and eidt -->
+    <button class="w3-button w3-white"><a href="/book/delete/{{$book->Book_id}}" class="w3-bar-item w3-button w3-hover-black">delete</a></button>
+    <button class="w3-button w3-white"><a href="/book/edit/{{$book->Book_id}}" class="w3-bar-item w3-button w3-hover-black">edit</a></button>
   </section>
 
 </body>

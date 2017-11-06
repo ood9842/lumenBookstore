@@ -18,8 +18,8 @@ class BookInStocks extends Migration
             $table->string('book_id', 17);
             $table->integer('amount')->unsigned();
 
-            $table->foreign('stock_id')->references('Stock_id')->on('stocks');
-            $table->foreign('book_id')->references('Book_id')->on('books');
+            $table->foreign('stock_id')->references('Stock_id')->on('stocks')->onDelete('cascade');
+            $table->foreign('book_id')->references('Book_id')->on('books')->onDelete('cascade');
           });
 
     }

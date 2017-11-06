@@ -11,6 +11,7 @@
 |
 */
 
+use App\Books;
 use App\Book_in_stock;
 use App\Customers;
 use App\Employees;
@@ -34,15 +35,18 @@ $router->get('/', function () use ($router) {
 
 //show book page
 $router->get('/books', 'BookController@index');//for admin
-$router->get('/book/{id}', 'BookController@detail');//for admin
-$router->get('/book/create', 'BookController@create');//for admin
-$router->get('/book/delete', 'BookController@delete');
+$router->get('/book/{id}', 'BookController@read');//for admin
+$router->post('/book/create', 'BookController@create');//for admin
+//$router->get('/book/delete/{id}', 'BookController@delete');//
+//$router->get('/book/edit/{id}', 'BookController@edit');//
+
+
 
 
 
 
 //show book in stock page
-$router->get('/book_in_stock', 'Book_in_stockController@index');//for admin
+//$router->get('/book_in_stock', 'Book_in_stockController@index');//for admin
 
 
 
