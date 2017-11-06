@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Laravel\Lumen\Routing\Controller as BaseController;
 use Illuminate\Http\Request;
 
-use App\Books;
+use App\Models\Books;
 
 class BookController extends BaseController
 {
@@ -21,6 +21,10 @@ class BookController extends BaseController
       return view('book.detail', compact('book'));
     }
 
+    public function form()
+    {
+      return view('book.create');
+    }
 
 //CRUD
     public function create(Request $request)//not done
@@ -31,7 +35,7 @@ class BookController extends BaseController
       $book->type = $request->input('type');
       $book->edition = $request->input('edition');
       $book->publisher_name = $request->input('Pname');
-      $book->published_year->input('Pyear');
+      $book->published_year= $request->input('Pyear');
       $book->price = $request->input('price');
       $book->save();//store
 

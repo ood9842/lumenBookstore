@@ -72,6 +72,6 @@ table.sortable thead {
       </table>
 
       <!-- bottom to page create -->
-          <button class="w3-button w3-white"><a href="/book/create" class="w3-bar-item w3-button w3-hover-black">add book</a></button>
+          <button class="w3-button w3-white"><a href="/book/form">add book</a></button>
       </div>
 </html>
