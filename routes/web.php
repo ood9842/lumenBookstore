@@ -24,7 +24,7 @@ $router->get('/book/{id}', 'BookController@read');//show detail
 
 $router->post('/book/create', 'BookController@create');//store new table
 $router->post('/book/update/{id}', 'BookController@update');//edit table
-//$router->get('/book/delete/{id}', 'BookController@delete');//
+$router->get('/book/delete/{id}', 'BookController@delete');//
 //$router->get('/book/edit/{id}', 'BookController@edit');//
 
 

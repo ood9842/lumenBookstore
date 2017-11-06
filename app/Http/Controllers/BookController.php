@@ -66,6 +66,13 @@ class BookController extends BaseController
 
       return redirect('/books');
     }
+
+    public function delete($id)
+    {
+      $book=Books::findOrFail($id);
+      $book->delete();
+      return redirect('/books');
+    }
   }
 /*
     public function update($id)
