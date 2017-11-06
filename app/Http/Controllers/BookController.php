@@ -21,6 +21,10 @@ class BookController extends BaseController
       return view('book.detail', compact('book'));
     }
 
+    public function form()
+    {
+      return view('book.create');
+    }
 
 //CRUD
     public function create(Request $request)//not done
@@ -31,7 +35,9 @@ class BookController extends BaseController
       $book->type = $request->input('type');
       $book->edition = $request->input('edition');
       $book->publisher_name = $request->input('Pname');
-      $book->published_year = $request->input('Pyear');
+
+      $book->published_year= $request->input('Pyear');
+
       $book->price = $request->input('price');
       $book->save();//store
 

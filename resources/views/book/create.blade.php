@@ -9,7 +9,7 @@
     <title></title>
   </head>
   <body>
-    <form method="post">
+    <form method="post" action="/book/create">
       <div class="form-group">
         <label class="col-form-label" for="formGroupExampleInput">Book ID</label>
         <input type="text" class="form-control" name="id" placeholder="ID">

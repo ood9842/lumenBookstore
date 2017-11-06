@@ -37,7 +37,8 @@ $router->get('/', function () use ($router) {
 
 $router->get('/books', 'BookController@index');//for admin
 $router->get('/book/{id}', 'BookController@read');//for admin
-$router->post('/book/create', 'BookController@create');//for admin
+$router->get('/book/form', 'BookController@form');//for admin
+$router->post('/book/create', 'BookController@create');//store book form
 //$router->get('/book/delete/{id}', 'BookController@delete');//
 //$router->get('/book/edit/{id}', 'BookController@edit');//
 
