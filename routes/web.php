@@ -11,34 +11,19 @@
 |
 */
 
-use App\Models\Books;
-use App\Models\Book_in_stock;
-use App\Models\Customers;
-use App\Models\Employees;
-use App\Models\Managers;
-use App\Models\Persons;
-use App\Models\Product_lines;
-use App\Models\Publishers;
-use App\Models\Sell_details;
-use App\Models\Sell_logs;
-use App\Models\Staffs;
-use App\Models\Stock_keepers;
-use App\Models\Stocks;
-use App\Models\Stores;
-use App\Models\Supply_details;
-use App\Models\Supply_logs;
-
-
 $router->get('/', function () use ($router) {
     return $router->app->version();
 });
 
 //show book page
 
-$router->get('/books', 'BookController@index');//for admin
-$router->get('/book/{id}', 'BookController@read');//for admin
-$router->get('/book/form', 'BookController@form');//for admin
-$router->post('/book/create', 'BookController@create');//store book form
+$router->get('/books', 'BookController@index');//show all
+$router->get('/book/edit/{id}', 'BookController@edit');//edit
+$router->get('/book/form', 'BookController@form');//form to create
+$router->get('/book/{id}', 'BookController@read');//show detail
+
+$router->post('/book/create', 'BookController@create');//store new table
+$router->post('/book/update/{id}', 'BookController@update');//edit table
 //$router->get('/book/delete/{id}', 'BookController@delete');//
 //$router->get('/book/edit/{id}', 'BookController@edit');//
 

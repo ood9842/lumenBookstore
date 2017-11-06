@@ -9,34 +9,30 @@
     <title></title>
   </head>
   <body>
-    <form method="post" action="/update">
-      <div class="form-group">
-        <label class="col-form-label" for="formGroupExampleInput">Book ID</label>
-        <input type="text" class="form-control" id="formGroupExampleInput" placeholder="ID">
-      </div>
+    <form method="post" action="/book/update/{{$book->Book_id}}">
       <div class="form-group">
         <label class="col-form-label" for="formGroupExampleInput">Book name</label>
-        <input type="text" class="form-control" id="formGroupExampleInput" placeholder="name">
+        <input type="text" class="form-control" name="Bname" placeholder="name">
       </div>
       <div class="form-group">
         <label class="col-form-label" for="formGroupExampleInput">Book type</label>
-        <input type="text" class="form-control" id="formGroupExampleInput" placeholder="type">
+        <input type="text" class="form-control" name="type" placeholder="type">
       </div>
       <div class="form-group">
         <label class="col-form-label" for="formGroupExampleInput">Edition</label>
-        <input type="text" class="form-control" id="formGroupExampleInput" placeholder="edition">
+        <input type="text" class="form-control" name="edition" placeholder="edition">
       </div>
       <div class="form-group">
         <label class="col-form-label" for="formGroupExampleInput">Publisher by</label>
-        <input type="text" class="form-control" id="formGroupExampleInput" placeholder="name">
+        <input type="text" class="form-control" name="Pname" placeholder="name">
       </div>
       <div class="form-group">
         <label class="col-form-label" for="formGroupExampleInput">Published year</label>
-        <input type="text" class="form-control" id="formGroupExampleInput" placeholder="year">
+        <input type="text" class="form-control" name="Pyear" placeholder="year">
       </div>
       <div class="form-group">
         <label class="col-form-label" for="formGroupExampleInput">Price</label>
-        <input type="text" class="form-control" id="formGroupExampleInput">
+        <input type="text" class="form-control" name="price">
       </div>
       </div>
       <button type="submit" class="btn btn-primary">Submit</button>
