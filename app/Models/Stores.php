@@ -26,7 +26,7 @@ class Stores extends Model
 
     public function members()
     {
-        return $this->belongsTo('App\Models\Customers');
+        return $this->hasMany('App\Models\Customers');
     }
 
     public function stock()
