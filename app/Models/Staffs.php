@@ -9,6 +9,7 @@ class Staffs extends Model
     /**
      * Get the phone record associated with the user.
      */
+    protected $table = 'staffs';
     protected $primaryKey='S_id';
     public $incrementing=false;
 

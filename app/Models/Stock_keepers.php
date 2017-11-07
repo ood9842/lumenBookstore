@@ -9,7 +9,7 @@ class Stock_keepers extends Model
     /**
      * Get the phone record associated with the user.
      */
-
+    protected $table = 'stock_keepers';
     public $incrementing=false;
 
 //relation

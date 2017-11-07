@@ -9,6 +9,7 @@ class Stores extends Model
     /**
      * Get the phone record associated with the user.
      */
+    protected $table = 'stores';
     protected $primaryKey='Store_id';
     public $incrementing=false;
 

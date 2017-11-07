@@ -5,72 +5,62 @@ namespace App\Http\Controllers;
 use Laravel\Lumen\Routing\Controller as BaseController;
 use Illuminate\Http\Request;
 
-use App\Models\Books;
+use App\Models\Persons;
 
 class PersonController extends BaseController
 {
     public function index()
     {
-      $books=Books::all();
-      return view('book.index', compact('books'));
+      $persons=Persons::all();
+      return view('person.index', compact('persons'));
     }
 
     public function read($id)
     {
-       $book=Books::findOrFail($id);
-       return view('book.detail', compact('book'));
+       $person=Persons::findOrFail($id);
+       return view('person.detail', compact('person'));
     }
 
     public function form()
     {
-      return view('book.create');
+      return view('person.create');
     }
 
     public function edit($id)
     {
-      $book=Books::findOrFail($id);
-      return view('book.edit', compact('book'));
+      $person=Persons::findOrFail($id);
+      return view('person.edit', compact('person'));
     }
 
 //CRUD
     public function create(Request $request)
     {
-      $book=new Books;//create row
-      $book->Book_id = $request->input('id');
-      $book->Book_name = $request->input('Bname');
-      $book->type = $request->input('type');
-      $book->edition = $request->input('edition');
-      $book->publisher_name = $request->input('Pname');
+      $person=new Persons;//create row
+      $person->P_id = $request->input('id');
+      $person->first_name = $request->input('FirstName');
+      $person->last_name = $request->input('LastName');
 
-      $book->published_year= $request->input('Pyear');
+      $person->save();//store
 
-      $book->price = $request->input('price');
-      $book->save();//store
-
-      return redirect('/books');
+      return redirect('/persons');
     }
 
     public function update(Request $request, $id)
     {
-      $book=Books::findOrFail($id);
-      $book->Book_name = $request->input('Bname');
-      $book->type = $request->input('type');
-      $book->edition = $request->input('edition');
-      $book->publisher_name = $request->input('Pname');
+      $person=Persons::findOrFail($id);
+      $person->first_name = $request->input('FirstName');
+      $person->last_name = $request->input('LastName');
 
-      $book->published_year= $request->input('Pyear');
+      $person->save();//store
+      $person->push();
 
-      $book->price = $request->input('price');
-      $book->save();//store
-      $book->push();
-
-      return redirect('/books');
+      return redirect('/persons');
     }
 
     public function delete($id)
     {
-      $book=Books::findOrFail($id);
-      $book->delete();
-      return redirect('/books');
+      $person=Persons::findOrFail($id);
+      $person->delete();
+      return redirect('/persons');
     }
   }

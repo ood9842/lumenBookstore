@@ -6,12 +6,12 @@ use Illuminate\Database\Eloquent\Model;
 
 class Books extends Model
 {
-
+    /**
+     * Get the phone record associated with the user.
+     */
     protected $table = 'books';
     public $timestamps = false;
-
     protected $primaryKey='Book_id';
-
     public $incrementing=false;
 
 //relation

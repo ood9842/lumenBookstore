@@ -9,6 +9,7 @@ class Sell_details extends Model
     /**
      * Get the phone record associated with the user.
      */
+    protected $table = 'sell_details';
     public $incrementing=false;
 
 //relation

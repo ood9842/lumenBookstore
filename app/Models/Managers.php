@@ -9,7 +9,7 @@ class Managers extends Model
     /**
      * Get the phone record associated with the user.
      */
-
+    protected $table = 'managers';
     public $incrementing=false;
 
 //relation

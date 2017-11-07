@@ -12,6 +12,7 @@ class Book_in_stock extends Model
     protected $table = 'book_in_stocks';
     public $incrementing=false;
     public $timestamps = false;
+    
 //relation
     public function stock()
     {

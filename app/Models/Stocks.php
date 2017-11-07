@@ -9,6 +9,7 @@ class Stocks extends Model
     /**
      * Get the phone record associated with the user.
      */
+    protected $table = 'stocks';
     protected $primaryKey='Stock_id';
     public $incrementing=false;
 

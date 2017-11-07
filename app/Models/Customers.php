@@ -9,6 +9,7 @@ class Customers extends Model
     /**
      * Get the phone record associated with the user.
      */
+    protected $table = 'customers';
     protected $primaryKey='C_id';
     public $incrementing=false;
 
