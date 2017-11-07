@@ -48,7 +48,6 @@ $router->get('/staff/delete/{id}', 'StaffController@delete');//delete table
 
 
 //customer page
-
 $router->get('/customers', 'CustomerController@index');//show all
 $router->get('/customer/edit/{id}', 'CustomerController@edit');//edit
 $router->get('/customer/form', 'CustomerController@form');//form to create
@@ -56,6 +55,20 @@ $router->get('/customer/detail/{id}', 'CustomerController@read');//show detail
 $router->post('/customer/create', 'CustomerController@create');//store new table
 $router->post('/customer/update/{id}', 'CustomerController@update');//edit table
 $router->get('/customer/delete/{id}', 'CustomerController@delete');//delete table
+
+//publisher page
+$router->get('/publishers', 'PublisherController@index');//show all
+$router->get('/publisher/edit/{id}', 'PublisherController@edit');//edit
+$router->get('/publisher/form', 'PublisherController@form');//form to create
+$router->get('/publisher/detail/{id}', 'PublisherController@read');//show detail
+$router->post('/publisher/create', 'PublisherController@create');//store new table
+$router->post('/publisher/update/{id}', 'PublisherController@update');//edit table
+$router->get('/publisher/delete/{id}', 'PublisherController@delete');//delete table
+
+
+
+
+
 
 $router->get('/book_in_stock', 'Book_in_stockController@index');//show all
 $router->get('/book_in_stock/edit/{id}/{id2}', 'Book_in_stockController@edit');
