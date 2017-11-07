@@ -21,7 +21,7 @@
                 <h3>52</h3>
             </div>
             <div class="w3-clear"></div>
-            <a href="#"><h4>Book In Stock</h4></a>
+            <a href="/book_in_stocks"><h4>Book In Stock</h4></a>
         </div>
     </div>
     <!--3-->
@@ -32,7 +32,7 @@
                 <h3>52</h3>
             </div>
             <div class="w3-clear"></div>
-            <a href="#"><h4>Customers</h4></a>
+            <a href="/customers"><h4>Customers</h4></a>
         </div>
     </div>
     <!--4-->
@@ -43,7 +43,7 @@
                 <h3>52</h3>
             </div>
             <div class="w3-clear"></div>
-            <a href="#"><h4>Persons</h4></a>
+            <a href="/persons"><h4>Persons</h4></a>
         </div>
     </div>
 </div>
@@ -57,7 +57,7 @@
                 <h3>52</h3>
             </div>
             <div class="w3-clear"></div>
-            <a href="#"><h4>Staffs</h4></a>
+            <a href="/staffs"><h4>Staffs</h4></a>
         </div>
     </div>
     <!--2-->
@@ -68,7 +68,7 @@
                 <h3>52</h3>
             </div>
             <div class="w3-clear"></div>
-            <a href="#"><h4>Managers</h4></a>
+            <a href="/managers"><h4>Managers</h4></a>
         </div>
     </div>
     <!--3-->
@@ -79,7 +79,7 @@
                 <h3>52</h3>
             </div>
             <div class="w3-clear"></div>
-            <a href="#"><h4>Employees</h4></a>
+            <a href="/employees"><h4>Employees</h4></a>
         </div>
     </div>
     <!--4-->
@@ -90,7 +90,7 @@
                 <h3>52</h3>
             </div>
             <div class="w3-clear"></div>
-            <a href="#"><h4>Stock Keepers</h4></a>
+            <a href="/stock_keepers"><h4>Stock Keepers</h4></a>
         </div>
     </div>
 </div>
@@ -104,7 +104,7 @@
                 <h3>52</h3>
             </div>
             <div class="w3-clear"></div>
-            <a href="#"><h4>Store</h4></a>
+            <a href="/stores"><h4>Store</h4></a>
         </div>
     </div>
     <!--2-->
@@ -115,7 +115,7 @@
                 <h3>52</h3>
             </div>
             <div class="w3-clear"></div>
-            <a href="#"><h4>Stockes</h4></a>
+            <a href="/stocks"><h4>Stocks</h4></a>
         </div>
     </div>
     <!--3-->
@@ -126,7 +126,7 @@
                 <h3>52</h3>
             </div>
             <div class="w3-clear"></div>
-            <a href="#"><h4>Publishers</h4></a>
+            <a href="/publishers"><h4>Publishers</h4></a>
         </div>
     </div>
     <!--4-->
@@ -137,7 +137,7 @@
                 <h3>52</h3>
             </div>
             <div class="w3-clear"></div>
-            <a href="#"><h4>Product Lines</h4></a>
+            <a href="/product_lines"><h4>Product Lines</h4></a>
         </div>
     </div>
 </div>
@@ -151,7 +151,7 @@
                 <h3>52</h3>
             </div>
             <div class="w3-clear"></div>
-            <a href="#"><h4>Sell Detail</h4></a>
+            <a href="/sell_details"><h4>Sell Detail</h4></a>
         </div>
     </div>
     <!--2-->
@@ -162,7 +162,7 @@
                 <h3>52</h3>
             </div>
             <div class="w3-clear"></div>
-            <a href="#"><h4>Sell Logs</h4></a>
+            <a href="/sell_logs"><h4>Sell Logs</h4></a>
         </div>
     </div>
     <!--3-->
@@ -173,7 +173,7 @@
                 <h3>52</h3>
             </div>
             <div class="w3-clear"></div>
-            <a href="#"><h4>Supply Detail</h4></a>
+            <a href="/supply_details"><h4>Supply Detail</h4></a>
         </div>
     </div>
     <!--4-->
@@ -184,7 +184,7 @@
                 <h3>52</h3>
             </div>
             <div class="w3-clear"></div>
-            <a href="#"><h4>Supply Logs</h4></a>
+            <a href="/supply_logs"><h4>Supply Logs</h4></a>
         </div>
     </div>
 </div>

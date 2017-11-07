@@ -2,13 +2,9 @@
 @section('content')
 
 
-  Book details<br>
-  {{$book->Book_id}}<br>
-  {{$book->Book_name}}<br>
-  {{$book->type}}<br>
-  {{$book->edition}}<br>
-  {{$book->publisher_name}}<br>
-  {{$book->published_year}}<br>
-  {{$book->price}}<br>
+  Person details<br>
+  {{$person->P_id}}<br>
+  {{$person->first_name}}<br>
+  {{$person->last_name}}<br>
 
 @stop

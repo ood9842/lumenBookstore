@@ -19,7 +19,6 @@
 $router->get('/', 'Controller@index');
 
 //book page
-
 $router->get('/books', 'BookController@index');//show all
 $router->get('/book/edit/{id}', 'BookController@edit');//edit
 $router->get('/book/form', 'BookController@form');//form to create
@@ -37,7 +36,31 @@ $router->post('/person/create', 'PersonController@create');//store new table
 $router->post('/person/update/{id}', 'PersonController@update');//edit table
 $router->get('/person/delete/{id}', 'PersonController@delete');//delete table
 
+<<<<<<< HEAD
+//staff page
+$router->get('/staffs', 'StaffController@index');//show all
+$router->get('/staff/edit/{id}', 'StaffController@edit');//edit
+$router->get('/staff/form', 'StaffController@form');//form to create
+$router->get('/staff/detail/{id}', 'StaffController@read');//show detail
+$router->post('/staff/create', 'StaffController@create');//store new table
+$router->post('/staff/update/{id}', 'StaffController@update');//edit table
+$router->get('/staff/delete/{id}', 'StaffController@delete');//delete table
 
+/*//test page
+$router->get('/test', function(){
+    return view('staff.test');
+});*/
+=======
+//customer page
+>>>>>>> 7a547c8ffcf148c6393ae43a5ad1e369894b102d
+
+$router->get('/customers', 'CustomerController@index');//show all
+$router->get('/customer/edit/{id}', 'CustomerController@edit');//edit
+$router->get('/customer/form', 'CustomerController@form');//form to create
+$router->get('/customer/detail/{id}', 'CustomerController@read');//show detail
+$router->post('/customer/create', 'CustomerController@create');//store new table
+$router->post('/customer/update/{id}', 'CustomerController@update');//edit table
+$router->get('/customer/delete/{id}', 'CustomerController@delete');//delete table
 
 $router->get('/book_in_stock', 'Book_in_stockController@index');//show all
 $router->get('/book_in_stock/edit/{id}/{id2}', 'Book_in_stockController@edit');
@@ -46,6 +69,8 @@ $router->get('/book_in_stock/form', 'Book_in_stockController@form');
 $router->post('/book_in_stock/update/{id}/{id2}', 'Book_in_stockController@update');//edit table
 $router->get('/book_in_stock/delete/{id}/{id2}', 'Book_in_stockController@delete');//
 $router->get('/book/edit/{id}', 'BookController@edit');
+<<<<<<< HEAD
+=======
 
 //show book in stock page
 //$router->get('/book_in_stock', 'Book_in_stockController@index');//for admin
@@ -62,72 +87,73 @@ $router->get('/book/edit/{id}', 'BookController@edit');
 
 
 
-$router->get('/customers', function(){
-    $customers=Customers::all();
-    return $customers;
-});
-
-$router->get('/employees', function(){
-    $employees=Employees::all();
-    return $employees;
-});
-
-$router->get('/managers', function(){
-    $managers=Managers::all();
-    return $managers;
-});
-
-$router->get('/persons', function(){
-    $persons=Persons::all();
-    return $persons;
-});
-
-$router->get('/product_lines', function(){
-    $product_lines=Product_lines::all();
-    return $product_lines;
-});
-
-$router->get('/publishers', function(){
-    $publishers=Publishers::all();
-    return $publishers;
-});
-
-$router->get('/sell_details', function(){
-    $sell_details=Sell_details::all();
-    return $sell_details;
-});
-
-$router->get('/sell_logs', function(){
-    $sell_logs=Sell_logs::all();
-    return $sell_logs;
-});
-
-$router->get('/staffs', function(){
-    $staffs=Staffs::all();
-    return $staffs;
-});
-
-$router->get('/stocks', function(){
-    $stocks=Stocks::all();
-    return $stocks;
-});
-
-$router->get('/stock_keepers', function(){
-    $stock_keepers=Stock_keepers::all();
-    return $stock_keepers;
-});
-
-$router->get('/stores', function(){
-    $stores=Stores::all();
-    return $stores;
-});
-
-$router->get('/supply_details', function(){
-    $supply_details=Supply_details::all();
-    return $supply_details;
-});
-
-$router->get('/supply_logs', function(){
-    $supply_logs=Supply_logs::all();
-    return $supply_logs;
-});
+// $router->get('/customers', function(){
+//     $customers=Customers::all();
+//     return $customers;
+// });
+//
+// $router->get('/employees', function(){
+//     $employees=Employees::all();
+//     return $employees;
+// });
+//
+// $router->get('/managers', function(){
+//     $managers=Managers::all();
+//     return $managers;
+// });
+//
+// $router->get('/persons', function(){
+//     $persons=Persons::all();
+//     return $persons;
+// });
+//
+// $router->get('/product_lines', function(){
+//     $product_lines=Product_lines::all();
+//     return $product_lines;
+// });
+//
+// $router->get('/publishers', function(){
+//     $publishers=Publishers::all();
+//     return $publishers;
+// });
+//
+// $router->get('/sell_details', function(){
+//     $sell_details=Sell_details::all();
+//     return $sell_details;
+// });
+//
+// $router->get('/sell_logs', function(){
+//     $sell_logs=Sell_logs::all();
+//     return $sell_logs;
+// });
+//
+// $router->get('/staffs', function(){
+//     $staffs=Staffs::all();
+//     return $staffs;
+// });
+//
+// $router->get('/stocks', function(){
+//     $stocks=Stocks::all();
+//     return $stocks;
+// });
+//
+// $router->get('/stock_keepers', function(){
+//     $stock_keepers=Stock_keepers::all();
+//     return $stock_keepers;
+// });
+//
+// $router->get('/stores', function(){
+//     $stores=Stores::all();
+//     return $stores;
+// });
+//
+// $router->get('/supply_details', function(){
+//     $supply_details=Supply_details::all();
+//     return $supply_details;
+// });
+//
+// $router->get('/supply_logs', function(){
+//     $supply_logs=Supply_logs::all();
+//     return $supply_logs;
+// });
+>>>>>>> 7a547c8ffcf148c6393ae43a5ad1e369894b102d
