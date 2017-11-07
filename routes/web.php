@@ -18,7 +18,7 @@
 //Index Page
 $router->get('/', 'Controller@index');
 
-//show book page
+//book page
 
 $router->get('/books', 'BookController@index');//show all
 $router->get('/book/edit/{id}', 'BookController@edit');//edit
@@ -27,6 +27,17 @@ $router->get('/book/detail/{id}', 'BookController@read');//show detail
 $router->post('/book/create', 'BookController@create');//store new table
 $router->post('/book/update/{id}', 'BookController@update');//edit table
 $router->get('/book/delete/{id}', 'BookController@delete');//delete table
+
+//person page
+$router->get('/persons', 'PersonController@index');//show all
+$router->get('/person/edit/{id}', 'PersonController@edit');//edit
+$router->get('/person/form', 'PersonController@form');//form to create
+$router->get('/person/detail/{id}', 'PersonController@read');//show detail
+$router->post('/person/create', 'PersonController@create');//store new table
+$router->post('/person/update/{id}', 'PersonController@update');//edit table
+$router->get('/person/delete/{id}', 'PersonController@delete');//delete table
+
+
 
 $router->get('/book_in_stock', 'Book_in_stockController@index');//show all
 $router->get('/book_in_stock/edit/{id}/{id2}', 'Book_in_stockController@edit');

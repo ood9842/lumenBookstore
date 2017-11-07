@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 
 use App\Models\Books;
 
-class BookController extends BaseController
+class PersonController extends BaseController
 {
     public function index()
     {
