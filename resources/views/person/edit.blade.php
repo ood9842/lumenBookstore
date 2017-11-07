@@ -25,7 +25,6 @@
       <label class="col-form-label" for="formGroupExampleInput">Price</label>
       <input type="text" class="form-control" name="price">
     </div>
-  </div>
   <button type="submit" class="btn btn-primary">Submit</button>
 </form>
 @stop
