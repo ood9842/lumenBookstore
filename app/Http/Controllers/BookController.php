@@ -15,11 +15,11 @@ class BookController extends BaseController
       return view('book.index', compact('books'));
     }
 
-    // public function read($id)
-    // {
-    //   $book=Books::findOrFail($id);
-    //   return view('book.detail', compact('book'));
-    // }
+    public function read($id)
+    {
+       $book=Books::findOrFail($id);
+       return view('book.detail', compact('book'));
+    }
 
     public function form()
     {

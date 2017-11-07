@@ -23,7 +23,7 @@ $router->get('/', 'Controller@index');
 $router->get('/books', 'BookController@index');//show all
 $router->get('/book/edit/{id}', 'BookController@edit');//edit
 $router->get('/book/form', 'BookController@form');//form to create
-//$router->get('/book/{id}', 'BookController@read');//show detail
+$router->get('/book/detail/{id}', 'BookController@read');//show detail
 $router->post('/book/create', 'BookController@create');//store new table
 $router->post('/book/update/{id}', 'BookController@update');//edit table
 $router->get('/book/delete/{id}', 'BookController@delete');//
