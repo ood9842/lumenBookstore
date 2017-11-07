@@ -11,13 +11,13 @@ class PublisherController extends BaseController
 {
     public function index()
     {
-      $publishers=Publisher::all();
+      $publishers=Publishers::all();
       return view('publisher.index', compact('publishers'));
     }
 
     public function read($id)
     {
-       $publisher=Publisher::findOrFail($id);
+       $publisher=Publishers::findOrFail($id);
        return view('publisher.detail', compact('publisher'));
     }
 
@@ -28,14 +28,14 @@ class PublisherController extends BaseController
 
     public function edit($id)
     {
-      $publisher=Publisher::findOrFail($id);
+      $publisher=Publishers::findOrFail($id);
       return view('publisher.edit', compact('publisher'));
     }
 
 //CRUD
     public function create(Request $request)
     {
-      $publisher=new Publisher;//create row
+      $publisher=new Publishers;//create row
       $publisher->Publisher_id = $request->input('id');
       $publisher->publisher_name = $request->input('Pubname');
       $publisher->save();//store
@@ -45,7 +45,7 @@ class PublisherController extends BaseController
 
     public function update(Request $request, $id)
     {
-      $publisher=Publishers::findOrFail($id);
+      $publisher=Publisherss::findOrFail($id);
       $publisher->Publisher_id = $request->input('id');//test case cahe update
       $publisher->publisher_name = $request->input('Pubname');
       $publisher->save();//store

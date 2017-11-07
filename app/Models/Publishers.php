@@ -9,7 +9,8 @@ class Publishers extends Model
     /**
      * Get the phone record associated with the user.
      */
-    protected $table = 'published';
+    protected $table = 'publishers';
+    public $timestamps = false;
     protected $primaryKey='Publisher_id';
     public $incrementing=false;
 

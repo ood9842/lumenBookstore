@@ -1,6 +1,6 @@
 @extends('layouts.default')
 @section('content')
-<form method="post" action="/publisher/update/">
+<form method="post" action="/publisher/create">
   <div class="form-group">
     <label class="col-form-label" for="formGroupExampleInput">Publisher ID</label>
     <input type="text" class="form-control" name="id" placeholder="ID">
