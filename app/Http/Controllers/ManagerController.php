@@ -58,16 +58,11 @@ class ManagerController extends BaseController
       return redirect('/managers');
     }
 
-    public function update(Request $request, $id)
+    public function update(Request $request, $id,$id2)
     {
-      $manager=Managers::where('staff_id','=',$id)->first();
-      $manager->store_workON = $request->input('store_workON');
+      $work_on = $request->input('store_manageON');
+      $employee=Managers::where('staff_id','=',$id)->where('store_manageON','=',$id2)->update(array('store_manageON'=>$work_on));
 
-      $manager->save();//store
-      $manager->push();//store
-
-      // var_dump($manager);
-      var_dump($input);
       return redirect('/managers');
     }
 

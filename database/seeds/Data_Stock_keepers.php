@@ -13,17 +13,17 @@ class Data_Stock_keepers extends Seeder
     {
       DB::table('stock_keepers')->insert([
         'staff_id'=>'STb01s001',
-        'store_workON'=>'SE001lc11'
+        'store_workON'=>'SK003lc50'
       ]);
 
       DB::table('stock_keepers')->insert([
         'staff_id'=>'STb02s002',
-        'store_workON'=>'SE002lc20'
+        'store_workON'=>'SK002lc20'
       ]);
 
       DB::table('stock_keepers')->insert([
         'staff_id'=>'STb03s003',
-        'store_workON'=>'SE003lc52'
+        'store_workON'=>'SK001lc11'
       ]);
     }
 }
