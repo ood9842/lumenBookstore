@@ -84,6 +84,14 @@ $router->post('/employee/create', 'EmployeeController@create');//store new table
 $router->post('/employee/update/{id}', 'EmployeeController@update');//edit table
 $router->get('/employee/delete/{id}', 'EmployeeController@delete');//delete table
 
+//stock page
+$router->get('/stocks', 'StockController@index');//show all
+$router->get('/stock/edit/{id}', 'StockController@edit');//edit
+$router->get('/stock/form', 'StockController@form');//form to create
+$router->get('/stock/detail/{id}', 'StockController@read');//show detail
+$router->post('/stock/create', 'StockController@create');//store new table
+$router->post('/stock/update/{id}', 'StockController@update');//edit table
+$router->get('/stock/delete/{id}', 'StockController@delete');//delete table
 
 
 $router->get('/book_in_stock', 'Book_in_stockController@index');//show all

@@ -11,6 +11,7 @@ class Stores extends Model
      */
     protected $table = 'stores';
     protected $primaryKey='Store_id';
+    public $timestamps = false;
     public $incrementing=false;
 
 //relation
