@@ -11,6 +11,7 @@ class Product_lines extends Model
      */
     protected $table = 'product_lines';
     protected $primaryKey='Product_line_id';
+    public $timestamps = false;
     public $incrementing=false;
 
 //relation

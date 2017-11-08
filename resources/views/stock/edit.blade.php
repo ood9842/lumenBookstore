@@ -1,30 +1,14 @@
 @extends('layouts.default')
 @section('content')
-<form method="post" action="/book/update/{{$book->Book_id}}">
+<form method="post" action="/stock/update/{{$stock->Stock_id}}">
   <div class="form-group">
-    <label class="col-form-label" for="formGroupExampleInput">Book name</label>
-    <input type="text" class="form-control" name="Bname" placeholder="name">
-    </div>
-    <div class="form-group">
-      <label class="col-form-label" for="formGroupExampleInput">Book type</label>
-      <input type="text" class="form-control" name="type" placeholder="type">
-    </div>
-    <div class="form-group">
-      <label class="col-form-label" for="formGroupExampleInput">Edition</label>
-      <input type="text" class="form-control" name="edition" placeholder="edition">
-    </div>
-    <div class="form-group">
-      <label class="col-form-label" for="formGroupExampleInput">Publisher by</label>
-      <input type="text" class="form-control" name="Pname" placeholder="name">
-    </div>
-    <div class="form-group">
-      <label class="col-form-label" for="formGroupExampleInput">Published year</label>
-      <input type="text" class="form-control" name="Pyear" placeholder="year">
-      </div>
-    <div class="form-group">
-      <label class="col-form-label" for="formGroupExampleInput">Price</label>
-      <input type="text" class="form-control" name="price">
-    </div>
+    <label class="col-form-label" for="formGroupExampleInput">Number of books</label>
+    <input type="int" class="form-control" name="number_of_books" placeholder="number_of_books">
+  </div>
+  <div class="form-group">
+    <label class="col-form-label" for="formGroupExampleInput">Location</label>
+    <input type="text" class="form-control" name="location" placeholder="location">
+  </div>
   <button type="submit" class="btn btn-primary">Submit</button>
   </form>
 </form>
