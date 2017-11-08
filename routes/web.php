@@ -79,12 +79,12 @@ $router->get('/supply_log/delete/{id}', 'Supply_logController@delete');//delete 
 
 //employee page
 $router->get('/employees', 'EmployeeController@index');//show all
-$router->get('/employee/edit/{id}', 'EmployeeController@edit');//edit
+$router->get('/employee/edit/{id}/{id2}', 'EmployeeController@edit');//edit
 $router->get('/employee/form', 'EmployeeController@form');//form to create
-$router->get('/employee/detail/{id}', 'EmployeeController@read');//show detail
+$router->get('/employee/detail/{id}/{id2}', 'EmployeeController@read');//show detail
 $router->post('/employee/create', 'EmployeeController@create');//store new table
-$router->post('/employee/update/{id}', 'EmployeeController@update');//edit table
-$router->get('/employee/delete/{id}', 'EmployeeController@delete');//delete table
+$router->post('/employee/update/{id}/{id2}', 'EmployeeController@update');//edit table
+$router->get('/employee/delete/{id}/{id2}', 'EmployeeController@delete');//delete table
 
 //sell_log page
 $router->get('/sell_logs', 'Sell_logController@index');//show all
