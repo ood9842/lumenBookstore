@@ -17,6 +17,8 @@
 
 //Index Page
 $router->get('/', 'Controller@index');
+//error Page
+$router->get('/errors/page', 'Controller@errors');
 
 //book page
 $router->get('/books', 'BookController@index');//show all

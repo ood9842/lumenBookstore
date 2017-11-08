@@ -23,7 +23,7 @@
   </div>
   <div class="form-group">
     <label class="col-form-label" for="formGroupExampleInput">Worked on date</label>
-    <input type="text" class="form-control" name="Wdate" placeholder="dd/mm/yyyy">
+    <input type="text" class="form-control" name="Wdate" placeholder="YYYY/MM/DD">
   </div>
   <button type="submit" class="btn btn-primary">Submit</button>
 </form>
