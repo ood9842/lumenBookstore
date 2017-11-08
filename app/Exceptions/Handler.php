@@ -45,6 +45,8 @@ class Handler extends ExceptionHandler
      */
     public function render($request, Exception $e)
     {
-        return parent::render($request, $e);
+        //return parent::render($request, $e);
+        //error อะไรก็ตามมันจะมาโผล่ที่หน้านี้ทันที
+        return redirect('/errors/page');
     }
 }

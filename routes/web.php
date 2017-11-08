@@ -17,6 +17,8 @@
 
 //Index Page
 $router->get('/', 'Controller@index');
+//error Page
+$router->get('/errors/page', 'Controller@errors');
 
 //book page
 $router->get('/books', 'BookController@index');//show all
@@ -77,12 +79,12 @@ $router->get('/supply_log/delete/{id}', 'Supply_logController@delete');//delete 
 
 //employee page
 $router->get('/employees', 'EmployeeController@index');//show all
-$router->get('/employee/edit/{id}', 'EmployeeController@edit');//edit
+$router->get('/employee/edit/{id}/{id2}', 'EmployeeController@edit');//edit
 $router->get('/employee/form', 'EmployeeController@form');//form to create
-$router->get('/employee/detail/{id}', 'EmployeeController@read');//show detail
+$router->get('/employee/detail/{id}/{id2}', 'EmployeeController@read');//show detail
 $router->post('/employee/create', 'EmployeeController@create');//store new table
-$router->post('/employee/update/{id}', 'EmployeeController@update');//edit table
-$router->get('/employee/delete/{id}', 'EmployeeController@delete');//delete table
+$router->post('/employee/update/{id}/{id2}', 'EmployeeController@update');//edit table
+$router->get('/employee/delete/{id}/{id2}', 'EmployeeController@delete');//delete table
 
 //sell_log page
 $router->get('/sell_logs', 'Sell_logController@index');//show all
@@ -111,7 +113,7 @@ $router->post('/store/create', 'StoreController@create');//store new table
 $router->post('/store/update/{id}', 'StoreController@update');//edit table
 $router->get('/store/delete/{id}', 'StoreController@delete');//delete table
 
-//store page
+//manager page
 $router->get('/managers', 'ManagerController@index');//show all
 $router->get('/manager/edit/{id}', 'ManagerController@edit');//edit
 $router->get('/manager/form', 'ManagerController@form');//form to create
@@ -120,6 +122,14 @@ $router->post('/manager/create', 'ManagerController@create');//store new table
 $router->post('/manager/update/{id}', 'ManagerController@update');//edit table
 $router->get('/manager/delete/{id}', 'ManagerController@delete');//delete table
 
+//product_line page
+$router->get('/product_lines', 'Product_lineController@index');//show all
+$router->get('/product_line/edit/{id}', 'Product_lineController@edit');//edit
+$router->get('/product_line/form', 'Product_lineController@form');//form to create
+$router->get('/product_line/detail/{id}', 'Product_lineController@read');//show detail
+$router->post('/product_line/create', 'Product_lineController@create');//store new table
+$router->post('/product_line/update/{id}', 'Product_lineController@update');//edit table
+$router->get('/product_line/delete/{id}', 'Product_lineController@delete');//delete table
 
 $router->get('/book_in_stock', 'Book_in_stockController@index');//show all
 $router->get('/book_in_stock/edit/{id}/{id2}', 'Book_in_stockController@edit');
