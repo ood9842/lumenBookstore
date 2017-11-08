@@ -111,6 +111,15 @@ $router->post('/store/create', 'StoreController@create');//store new table
 $router->post('/store/update/{id}', 'StoreController@update');//edit table
 $router->get('/store/delete/{id}', 'StoreController@delete');//delete table
 
+//product_line page
+$router->get('/product_lines', 'Product_lineController@index');//show all
+$router->get('/product_line/edit/{id}', 'Product_lineController@edit');//edit
+$router->get('/product_line/form', 'Product_lineController@form');//form to create
+$router->get('/product_line/detail/{id}', 'Product_lineController@read');//show detail
+$router->post('/product_line/create', 'Product_lineController@create');//store new table
+$router->post('/product_line/update/{id}', 'Product_lineController@update');//edit table
+$router->get('/product_line/delete/{id}', 'Product_lineController@delete');//delete table
+
 $router->get('/book_in_stock', 'Book_in_stockController@index');//show all
 $router->get('/book_in_stock/edit/{id}/{id2}', 'Book_in_stockController@edit');
 $router->get('/book_in_stock/form', 'Book_in_stockController@form');
