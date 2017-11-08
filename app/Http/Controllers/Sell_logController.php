@@ -6,6 +6,7 @@ use Laravel\Lumen\Routing\Controller as BaseController;
 use Illuminate\Http\Request;
 
 use App\Models\Sell_logs;
+use App\Models\Sell_details;
 
 class Sell_logController extends BaseController
 {
@@ -40,7 +41,7 @@ class Sell_logController extends BaseController
       $sell_log->stock_id = $request->input('SID');
       $sell_log->customer_id = $request->input('CusID');
       $sell_log->sell_date = $request->input('date');
-      $sell_log->total_payment = $request->input('payment');
+      $sell_log->total_payment = Sell_details::where('sell_logs_id','=',$sell_log->Sell_logs_id)->sum('total_line');
 
       $sell_log->save();//store
 
@@ -53,7 +54,8 @@ class Sell_logController extends BaseController
       $sell_log->stock_id = $request->input('SID');
       $sell_log->customer_id = $request->input('CusID');
       $sell_log->sell_date = $request->input('date');
-      $sell_log->total_payment = $request->input('payment');
+      $sell_log->total_payment = Sell_details::where('sell_logs_id','=',$sell_log->Sell_logs_id)->sum('total_line');
+
 
       $sell_log->save();//store
       $sell_log->push();

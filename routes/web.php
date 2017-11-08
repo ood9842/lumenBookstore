@@ -139,3 +139,12 @@ $router->get('/book_in_stock/detail/{id}/{id2}', 'Book_in_stockController@read')
 $router->post('/book_in_stock/create', 'Book_in_stockController@create');//store new table
 $router->post('/book_in_stock/update/{id}/{id2}', 'Book_in_stockController@update');//edit table
 $router->get('/book_in_stock/delete/{id}/{id2}', 'Book_in_stockController@delete');//delete table
+
+////Sell_detail page
+$router->get('/sell_details', 'Sell_detailController@index');//show all
+$router->get('/sell_detail/edit/{id}/{id2}', 'Sell_detailController@edit');//edit
+$router->get('/sell_detail/form', 'Sell_detailController@form');//form to create
+$router->get('/sell_detail/detail/{id}/{id2}', 'Sell_detailController@read');//show detail
+$router->post('/sell_detail/create', 'Sell_detailController@create');//store new table
+$router->post('/sell_detail/update/{id}/{id2}', 'Sell_detailController@update');//edit table
+$router->get('/sell_detail/delete/{id}/{id2}', 'Sell_detailController@delete');//delete table
