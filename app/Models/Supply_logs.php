@@ -10,6 +10,7 @@ class Supply_logs extends Model
      * Get the phone record associated with the user.
      */
     protected $table = 'supply_logs';
+    public $timestamps = false;
     protected $primaryKey='Slogs_id';
     public $incrementing=false;
 
