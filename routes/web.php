@@ -157,3 +157,12 @@ $router->get('/supply_detail/detail/{id}/{id2}', 'Supply_detailController@read')
 $router->post('/supply_detail/create', 'Supply_detailController@create');//store new table
 $router->post('/supply_detail/update/{id}/{id2}', 'Supply_detailController@update');//edit table
 $router->get('/supply_detail/delete/{id}/{id2}', 'Supply_detailController@delete');//delete table
+
+//manager page
+$router->get('/stock_keepers', 'Stock_keeperController@index');//show all
+$router->get('/stock_keeper/edit/{id}', 'Stock_keeperController@edit');//edit
+$router->get('/stock_keeper/form', 'Stock_keeperController@form');//form to create
+$router->get('/stock_keeper/detail/{id}', 'Stock_keeperController@read');//show detail
+$router->post('/stock_keeper/create', 'Stock_keeperController@create');//store new table
+$router->post('/stock_keeper/update/{id}/{id2}', 'Stock_keeperController@update');//edit table
+$router->get('/stock_keeper/delete/{id}', 'Stock_keeperController@delete');//delete table
