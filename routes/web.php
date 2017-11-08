@@ -113,6 +113,15 @@ $router->post('/store/create', 'StoreController@create');//store new table
 $router->post('/store/update/{id}', 'StoreController@update');//edit table
 $router->get('/store/delete/{id}', 'StoreController@delete');//delete table
 
+//manager page
+$router->get('/managers', 'ManagerController@index');//show all
+$router->get('/manager/edit/{id}', 'ManagerController@edit');//edit
+$router->get('/manager/form', 'ManagerController@form');//form to create
+$router->get('/manager/detail/{id}', 'ManagerController@read');//show detail
+$router->post('/manager/create', 'ManagerController@create');//store new table
+$router->post('/manager/update/{id}', 'ManagerController@update');//edit table
+$router->get('/manager/delete/{id}', 'ManagerController@delete');//delete table
+
 //product_line page
 $router->get('/product_lines', 'Product_lineController@index');//show all
 $router->get('/product_line/edit/{id}', 'Product_lineController@edit');//edit
