@@ -93,6 +93,14 @@ $router->post('/stock/create', 'StockController@create');//store new table
 $router->post('/stock/update/{id}', 'StockController@update');//edit table
 $router->get('/stock/delete/{id}', 'StockController@delete');//delete table
 
+//store page
+$router->get('/stores', 'StoreController@index');//show all
+$router->get('/store/edit/{id}', 'StoreController@edit');//edit
+$router->get('/store/form', 'StoreController@form');//form to create
+$router->get('/store/detail/{id}', 'StoreController@read');//show detail
+$router->post('/store/create', 'StoreController@create');//store new table
+$router->post('/store/update/{id}', 'StoreController@update');//edit table
+$router->get('/store/delete/{id}', 'StoreController@delete');//delete table
 
 $router->get('/book_in_stock', 'Book_in_stockController@index');//show all
 $router->get('/book_in_stock/edit/{id}/{id2}', 'Book_in_stockController@edit');
