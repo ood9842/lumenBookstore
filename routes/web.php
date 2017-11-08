@@ -65,6 +65,15 @@ $router->post('/publisher/create', 'PublisherController@create');//store new tab
 $router->post('/publisher/update/{id}', 'PublisherController@update');//edit table
 $router->get('/publisher/delete/{id}', 'PublisherController@delete');//delete table
 
+//supply_log page
+$router->get('/supply_logs', 'Supply_logController@index');//show all
+$router->get('/supply_log/edit/{id}', 'Supply_logController@edit');//edit
+$router->get('/supply_log/form', 'Supply_logController@form');//form to create
+$router->get('/supply_log/detail/{id}', 'Supply_logController@read');//show detail
+$router->post('/supply_log/create', 'Supply_logController@create');//store new table
+$router->post('/supply_log/update/{id}', 'Supply_logController@update');//edit table
+$router->get('/supply_log/delete/{id}', 'Supply_logController@delete');//delete table
+
 
 
 
