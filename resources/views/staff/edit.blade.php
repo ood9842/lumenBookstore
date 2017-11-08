@@ -1,14 +1,6 @@
 @extends('layouts.default')
 @section('content')
-<form method="post" action="/staff/create">
-  <div class="form-group">
-    <label class="col-form-label" for="formGroupExampleInput">First name ID</label>
-    <input type="text" class="form-control" name="FirstName" placeholder="name">
-  </div>
-  <div class="form-group">
-    <label class="col-form-label" for="formGroupExampleInput">Last name</label>
-    <input type="text" class="form-control" name="LastName" placeholder="last name">
-  </div>
+<form method="post" action="/staff/update/{{$staff->S_id}}">
   <div class="form-group">
     <label class="col-form-label" for="formGroupExampleInput">Salary</label>
     <input type="text" class="form-control" name="salary">

@@ -11,6 +11,7 @@ class Stocks extends Model
      */
     protected $table = 'stocks';
     protected $primaryKey='Stock_id';
+    public $timestamps = false;
     public $incrementing=false;
 
 //relation

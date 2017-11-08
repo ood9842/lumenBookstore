@@ -48,7 +48,6 @@ $router->get('/staff/delete/{id}', 'StaffController@delete');//delete table
 
 
 //customer page
-
 $router->get('/customers', 'CustomerController@index');//show all
 $router->get('/customer/edit/{id}', 'CustomerController@edit');//edit
 $router->get('/customer/form', 'CustomerController@form');//form to create
@@ -57,8 +56,26 @@ $router->post('/customer/create', 'CustomerController@create');//store new table
 $router->post('/customer/update/{id}', 'CustomerController@update');//edit table
 $router->get('/customer/delete/{id}', 'CustomerController@delete');//delete table
 
-//employee page
 
+//publisher page
+$router->get('/publishers', 'PublisherController@index');//show all
+$router->get('/publisher/edit/{id}', 'PublisherController@edit');//edit
+$router->get('/publisher/form', 'PublisherController@form');//form to create
+$router->get('/publisher/detail/{id}', 'PublisherController@read');//show detail
+$router->post('/publisher/create', 'PublisherController@create');//store new table
+$router->post('/publisher/update/{id}', 'PublisherController@update');//edit table
+$router->get('/publisher/delete/{id}', 'PublisherController@delete');//delete table
+
+//supply_log page
+$router->get('/supply_logs', 'Supply_logController@index');//show all
+$router->get('/supply_log/edit/{id}', 'Supply_logController@edit');//edit
+$router->get('/supply_log/form', 'Supply_logController@form');//form to create
+$router->get('/supply_log/detail/{id}', 'Supply_logController@read');//show detail
+$router->post('/supply_log/create', 'Supply_logController@create');//store new table
+$router->post('/supply_log/update/{id}', 'Supply_logController@update');//edit table
+$router->get('/supply_log/delete/{id}', 'Supply_logController@delete');//delete table
+
+//employee page
 $router->get('/employees', 'EmployeeController@index');//show all
 $router->get('/employee/edit/{id}', 'EmployeeController@edit');//edit
 $router->get('/employee/form', 'EmployeeController@form');//form to create
@@ -66,6 +83,16 @@ $router->get('/employee/detail/{id}', 'EmployeeController@read');//show detail
 $router->post('/employee/create', 'EmployeeController@create');//store new table
 $router->post('/employee/update/{id}', 'EmployeeController@update');//edit table
 $router->get('/employee/delete/{id}', 'EmployeeController@delete');//delete table
+
+//stock page
+$router->get('/stocks', 'StockController@index');//show all
+$router->get('/stock/edit/{id}', 'StockController@edit');//edit
+$router->get('/stock/form', 'StockController@form');//form to create
+$router->get('/stock/detail/{id}', 'StockController@read');//show detail
+$router->post('/stock/create', 'StockController@create');//store new table
+$router->post('/stock/update/{id}', 'StockController@update');//edit table
+$router->get('/stock/delete/{id}', 'StockController@delete');//delete table
+
 
 $router->get('/book_in_stock', 'Book_in_stockController@index');//show all
 $router->get('/book_in_stock/edit/{id}/{id2}', 'Book_in_stockController@edit');

@@ -57,7 +57,6 @@ class StaffController extends BaseController
     public function update(Request $request, $id)
     {
       $staff=Staffs::findOrFail($id);
-      $staff->P_id = $request->input('PID');
       $staff->salary = $request->input('salary');
       $staff->work_on = $request->input('Wdate');
 

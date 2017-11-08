@@ -17,5 +17,5 @@
     @endforeach
   </table></center>
   <!-- bottom to page create -->
-  <center><button class="w3-button w3-white"><a href="/employee/form">add book</a></button></center>
+  <center><button class="w3-button w3-white"><a href="/employee/form">add employee</a></button></center>
 @stop
