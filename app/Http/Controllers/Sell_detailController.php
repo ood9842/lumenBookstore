@@ -42,7 +42,7 @@ class Sell_detailController extends BaseController
       $book_name = Books::where('Book_id','=',$book_id)->first()->Book_name;
       $price = Books::where('book_id','=',$book_id)->first()->price;
       $total_line = $price * $amount;
-      $book_in_stock=Sell_details::insert(array('sell_logs_id' => $sell_logs_id, 'book_id' => $book_id, 'book_name' => $book_name, 'price' => $price, 'amount' => $amount, 'total_line' => $total_line));
+      $sell_detail=Sell_details::insert(array('sell_logs_id' => $sell_logs_id, 'book_id' => $book_id, 'book_name' => $book_name, 'price' => $price, 'amount' => $amount, 'total_line' => $total_line));
 
       return redirect('/sell_details');
     }

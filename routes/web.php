@@ -148,3 +148,12 @@ $router->get('/sell_detail/detail/{id}/{id2}', 'Sell_detailController@read');//s
 $router->post('/sell_detail/create', 'Sell_detailController@create');//store new table
 $router->post('/sell_detail/update/{id}/{id2}', 'Sell_detailController@update');//edit table
 $router->get('/sell_detail/delete/{id}/{id2}', 'Sell_detailController@delete');//delete table
+
+////Supply_detail page
+$router->get('/supply_details', 'Supply_detailController@index');//show all
+$router->get('/supply_detail/edit/{id}/{id2}', 'Supply_detailController@edit');//edit
+$router->get('/supply_detail/form', 'Supply_detailController@form');//form to create
+$router->get('/supply_detail/detail/{id}/{id2}', 'Supply_detailController@read');//show detail
+$router->post('/supply_detail/create', 'Supply_detailController@create');//store new table
+$router->post('/supply_detail/update/{id}/{id2}', 'Supply_detailController@update');//edit table
+$router->get('/supply_detail/delete/{id}/{id2}', 'Supply_detailController@delete');//delete table

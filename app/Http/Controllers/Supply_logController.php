@@ -6,6 +6,7 @@ use Laravel\Lumen\Routing\Controller as BaseController;
 use Illuminate\Http\Request;
 
 use App\Models\Supply_logs;
+use App\Models\Supply_details;
 
 class Supply_logController extends BaseController
 {
@@ -40,7 +41,7 @@ class Supply_logController extends BaseController
       $supply_log->stock_id = $request->input('SID');
       $supply_log->product_line_id = $request->input('ProID');
       $supply_log->supply_date = $request->input('date');
-      $supply_log->total_payment = $request->input('payment');
+      $supply_log->total_payment = Supply_details::where('slogs_id','=',$supply_log->Slogs_id)->sum('total_line');
       $supply_log->sentOrback= $request->input('srb');
 
       $supply_log->save();//store
@@ -54,7 +55,7 @@ class Supply_logController extends BaseController
       $supply_log->stock_id = $request->input('SID');
       $supply_log->product_line_id = $request->input('ProID');
       $supply_log->supply_date = $request->input('date');
-      $supply_log->total_payment = $request->input('payment');
+      $supply_log->total_payment = Supply_details::where('slogs_id','=',$supply_log->Slogs_id)->sum('total_line');
       $supply_log->sentOrback= $request->input('srb');
 
       $supply_log->save();//store

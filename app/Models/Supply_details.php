@@ -11,6 +11,7 @@ class Supply_details extends Model
      */
     protected $table = 'supply_details';
     public $incrementing=false;
+    public $timestamps = false;
 
 //relation
     public function supply_log()
