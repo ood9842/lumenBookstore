@@ -119,7 +119,7 @@ $router->get('/manager/edit/{id}', 'ManagerController@edit');//edit
 $router->get('/manager/form', 'ManagerController@form');//form to create
 $router->get('/manager/detail/{id}', 'ManagerController@read');//show detail
 $router->post('/manager/create', 'ManagerController@create');//store new table
-$router->post('/manager/update/{id}', 'ManagerController@update');//edit table
+$router->post('/manager/update/{id}/{id2}', 'ManagerController@update');//edit table
 $router->get('/manager/delete/{id}', 'ManagerController@delete');//delete table
 
 //product_line page
