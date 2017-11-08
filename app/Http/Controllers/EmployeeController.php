@@ -6,6 +6,8 @@ use Laravel\Lumen\Routing\Controller as BaseController;
 use Illuminate\Http\Request;
 
 use App\Models\Employees;
+use App\Models\Stores;
+use App\Models\Staffs;
 
 class EmployeeController extends BaseController
 {
@@ -36,7 +38,7 @@ class EmployeeController extends BaseController
     public function create(Request $request)
     {
       $employee=new Employees;//create row
-      $employee->staff_id = $request->input('staff_id')->first();
+      $employee->staff_id = $request->input('staff_id');
       $employee->store_workON = $request->input('store_workON');
 
 
@@ -48,12 +50,13 @@ class EmployeeController extends BaseController
     public function update(Request $request, $id)
     {
       $employee=Employees::where('staff_id','=',$id)->first();
-      $employee->first()->store_workON = $request->input('store_workON');
+      $employee->store_workON = $request->input('store_workON');
 
+      $employee->save();//store
+      $employee->push();//store
 
-      $employee->first()->save();//store
-      $employee->first()->push();//store
-
+      // var_dump($employee);
+      var_dump($input);
       return redirect('/employees');
     }
 

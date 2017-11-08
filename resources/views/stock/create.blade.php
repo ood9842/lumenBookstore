@@ -1,33 +1,17 @@
 @extends('layouts.default')
 @section('content')
-<form method="post" action="/book/create">
+<form method="post" action="/stock/create">
   <div class="form-group">
-    <label class="col-form-label" for="formGroupExampleInput">Book ID</label>
-    <input type="text" class="form-control" name="id" placeholder="ID">
+    <label class="col-form-label" for="formGroupExampleInput">Stock ID</label>
+    <input type="text" class="form-control" name="Stock_id" placeholder="Stock_id">
   </div>
   <div class="form-group">
-    <label class="col-form-label" for="formGroupExampleInput">Book name</label>
-    <input type="text" class="form-control" name="Bname" placeholder="name">
+    <label class="col-form-label" for="formGroupExampleInput">Number of books</label>
+    <input type="int" class="form-control" name="number_of_books" placeholder="number_of_books">
   </div>
   <div class="form-group">
-    <label class="col-form-label" for="formGroupExampleInput">Book type</label>
-    <input type="text" class="form-control" name="type" placeholder="type">
-  </div>
-  <div class="form-group">
-    <label class="col-form-label" for="formGroupExampleInput">Edition</label>
-    <input type="int" class="form-control" name="edition" placeholder="edition">
-  </div>
-  <div class="form-group">
-    <label class="col-form-label" for="formGroupExampleInput">Publisher by</label>
-    <input type="text" class="form-control" name="Pname" placeholder="name">
-  </div>
-  <div class="form-group">
-    <label class="col-form-label" for="formGroupExampleInput">Published year</label>
-    <input type="int" class="form-control" name="Pyear" placeholder="year">
-  </div>
-  <div class="form-group">
-    <label class="col-form-label" for="formGroupExampleInput">Price</label>
-    <input type="double" class="form-control" name="price">
+    <label class="col-form-label" for="formGroupExampleInput">Location</label>
+    <input type="text" class="form-control" name="location" placeholder="location">
   </div>
   <button type="submit" class="btn btn-primary">Submit</button>
 </form>
