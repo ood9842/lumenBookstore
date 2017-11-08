@@ -4,6 +4,7 @@
     <div class="w3-container w3-white" >
     <tr>
       <th>Person ID</th>
+      <th>Staff ID</th>
       <th>Staff name</th>
       <th>Salary</th>
       <th>Work date</th>
@@ -11,6 +12,7 @@
     @foreach ($staffs as $staff)
     <tr>
       <th>{{$staff->person_id}}</th>
+      <th>{{$staff->S_id}}</th>
       <th>{{$staff->S_id}}</th>
       <th>{{$staff->salary}}</th>
       <th>{{$staff->work_on}}</th>

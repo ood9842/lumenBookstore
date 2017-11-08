@@ -6,6 +6,7 @@ use Laravel\Lumen\Routing\Controller as BaseController;
 use Illuminate\Http\Request;
 
 use App\Models\Customers;
+use App\Models\Persons;
 
 class CustomerController extends BaseController
 {
@@ -35,6 +36,15 @@ class CustomerController extends BaseController
 //CRUD
     public function create(Request $request)
     {
+      $persons=Persons::find($request->input('persons_id'));
+      if($persons==Null) {
+        $person=new Persons;//create row
+        $person->P_id = $request->input('person_id');
+        $person->first_name = $request->input('FirstName');
+        $person->last_name = $request->input('LastName');
+        $person->save();//store
+      }
+
       $customer=new Customers;//create row
       $customer->C_id = $request->input('C_id');
       $customer->person_id = $request->input('person_id');

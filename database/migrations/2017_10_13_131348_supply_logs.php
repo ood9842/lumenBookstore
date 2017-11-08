@@ -19,7 +19,7 @@ class SupplyLogs extends Migration
         $table->string('product_line_id', 10);
         $table->date('supply_date');
         $table->float('total_payment');
-        $table->boolean('sentOrback');
+        $table->string('sentOrback');
 
         $table->primary('Slogs_id');
         $table->foreign('product_line_id')->references('Product_line_id')->on('product_lines')->onDelete('cascade');;
