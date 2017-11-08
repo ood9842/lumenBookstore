@@ -3,29 +3,19 @@
   <center><table class="sortable" border="1" id="myTable" style="width:97%;">
     <div class="w3-container w3-white" >
     <tr>
-      <th>Book ID</th>
-      <th>Book name</th>
-      <th>type</th>
-      <th>edition</th>
-      <th>publisher by</th>
-      <th>published year</th>
-      <th>price</th>
+      <th>Product Line ID</th>
+      <th>Publisher ID</th>
     </tr>
-    @foreach ($books as $book)
+    @foreach ($product_lines as $product_line)
     <tr>
-      <th>{{$book->Book_id}}</th>
-      <th>{{$book->Book_name}}</th>
-      <th>{{$book->type}}</th>
-      <th>{{$book->edition}}</th>
-      <th>{{$book->publisher_name}}</th>
-      <th>{{$book->published_year}}</th>
-      <th>{{$book->price}}</th>
-      <th><a href="/book/detail/{{$book->Book_id}}">detail</a></th>
-      <th><a href="/book/edit/{{$book->Book_id}}">edit</a></th>
-      <th><a href="/book/delete/{{$book->Book_id}}">delete</a></th>
+        <th>{{$product_line->Product_line_id}}</th>
+      <th>{{$product_line->publisher_id}}</th>
+      <th><a href="/product_line/detail/{{$product_line->Product_line_id}}">detail</a></th>
+      <th><a href="/product_line/edit/{{$product_line->Product_line_id}}">edit</a></th>
+      <th><a href="/product_line/delete/{{$product_line->Product_line_id}}">delete</a></th>
     </tr>
     @endforeach
   </table></center>
   <!-- bottom to page create -->
-  <center><button class="w3-button w3-white"><a href="/book/form">add book</a></button></center>
+  <center><button class="w3-button w3-white"><a href="/product_line/form">add store</a></button></center>
 @stop
