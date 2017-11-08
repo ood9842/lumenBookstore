@@ -23,13 +23,13 @@
   </div>
   <div class="form-check">
   <label class="form-check-label">
-    <input class="form-check-input" type="checkbox" name="srb" value=true>
+    <input class="form-check-input" type="checkbox" name="srb" value="sent">
     Send
   </label>
   </div>
   <div class="form-check disabled">
   <label class="form-check-label">
-    <input class="form-check-input" type="checkbox" name="srb" value=false>
+    <input class="form-check-input" type="checkbox" name="srb" value="sentback">
     Back
   </label>
   </div>
