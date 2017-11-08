@@ -131,10 +131,11 @@ $router->post('/product_line/create', 'Product_lineController@create');//store n
 $router->post('/product_line/update/{id}', 'Product_lineController@update');//edit table
 $router->get('/product_line/delete/{id}', 'Product_lineController@delete');//delete table
 
-$router->get('/book_in_stock', 'Book_in_stockController@index');//show all
-$router->get('/book_in_stock/edit/{id}/{id2}', 'Book_in_stockController@edit');
-$router->get('/book_in_stock/form', 'Book_in_stockController@form');
-
+////Book_in_stock page
+$router->get('/book_in_stocks', 'Book_in_stockController@index');//show all
+$router->get('/book_in_stock/edit/{id}/{id2}', 'Book_in_stockController@edit');//edit
+$router->get('/book_in_stock/form', 'Book_in_stockController@form');//form to create
+$router->get('/book_in_stock/detail/{id}/{id2}', 'Book_in_stockController@read');//show detail
+$router->post('/book_in_stock/create', 'Book_in_stockController@create');//store new table
 $router->post('/book_in_stock/update/{id}/{id2}', 'Book_in_stockController@update');//edit table
-$router->get('/book_in_stock/delete/{id}/{id2}', 'Book_in_stockController@delete');//
-$router->get('/book/edit/{id}', 'BookController@edit');
+$router->get('/book_in_stock/delete/{id}/{id2}', 'Book_in_stockController@delete');//delete table
