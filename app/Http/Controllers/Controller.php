@@ -11,6 +11,11 @@ class Controller extends BaseController
       return view('home');
   }
 
+  public function errors()
+  {
+      return view('errors.page');
+  }
+
   /**
    * Show the form for creating a new resource.
    *
