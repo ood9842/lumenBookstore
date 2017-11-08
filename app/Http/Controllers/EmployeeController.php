@@ -36,8 +36,8 @@ class EmployeeController extends BaseController
     public function create(Request $request)
     {
       $employee=new Employees;//create row
-      $employee->staff_id = $request->input('staff_id')->first();
-      $employee->store_workON = $request->input('store_workON');
+      $employee->first()->staff_id = $request->input('staff_id');
+      $employee->first()->store_workON = $request->input('store_workON');
 
 
       $employee->save();//store
@@ -47,13 +47,15 @@ class EmployeeController extends BaseController
 
     public function update(Request $request, $id)
     {
+      $input = $request->only('store_workON');
       $employee=Employees::where('staff_id','=',$id)->first();
       $employee->first()->store_workON = $request->input('store_workON');
 
+      $employee->save();//store
+      $employee->push();//store
 
-      $employee->first()->save();//store
-      $employee->first()->push();//store
-
+      // var_dump($employee);
+      var_dump($input);
       return redirect('/employees');
     }
 
