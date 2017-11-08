@@ -9,6 +9,7 @@ class Sell_logs extends Model
     /**
      * Get the phone record associated with the user.
      */
+    protected $table = 'sell_logs';
     protected $primaryKey='Sell_logs_id';
     public $incrementing=false;
 

@@ -9,6 +9,7 @@ class Product_lines extends Model
     /**
      * Get the phone record associated with the user.
      */
+    protected $table = 'product_lines';
     protected $primaryKey='Product_line_id';
     public $incrementing=false;
 

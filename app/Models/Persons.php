@@ -9,6 +9,8 @@ class Persons extends Model
     /**
      * Get the phone record associated with the user.
      */
+    protected $table = 'persons';
+    public $timestamps = false;
     protected $primaryKey='P_id';
     public $incrementing=false;
 

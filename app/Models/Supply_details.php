@@ -9,6 +9,7 @@ class Supply_details extends Model
     /**
      * Get the phone record associated with the user.
      */
+    protected $table = 'supply_details';
     public $incrementing=false;
 
 //relation

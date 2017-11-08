@@ -9,7 +9,9 @@ class Customers extends Model
     /**
      * Get the phone record associated with the user.
      */
+    protected $table = 'customers';
     protected $primaryKey='C_id';
+    public $timestamps = false;
     public $incrementing=false;
 
 //relation
@@ -21,7 +23,7 @@ class Customers extends Model
 
     public function membered()
     {
-        return $this->hasMany('App\Models\Stores');
+        return $this->belongsTo('App\Models\Stores');
     }
 
     public function buy()

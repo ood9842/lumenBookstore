@@ -9,6 +9,7 @@ class Stores extends Model
     /**
      * Get the phone record associated with the user.
      */
+    protected $table = 'stores';
     protected $primaryKey='Store_id';
     public $incrementing=false;
 
@@ -25,7 +26,7 @@ class Stores extends Model
 
     public function members()
     {
-        return $this->belongsTo('App\Models\Customers');
+        return $this->hasMany('App\Models\Customers');
     }
 
     public function stock()
