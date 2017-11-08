@@ -111,6 +111,16 @@ $router->post('/store/create', 'StoreController@create');//store new table
 $router->post('/store/update/{id}', 'StoreController@update');//edit table
 $router->get('/store/delete/{id}', 'StoreController@delete');//delete table
 
+//store page
+$router->get('/managers', 'ManagerController@index');//show all
+$router->get('/manager/edit/{id}', 'ManagerController@edit');//edit
+$router->get('/manager/form', 'ManagerController@form');//form to create
+$router->get('/manager/detail/{id}', 'ManagerController@read');//show detail
+$router->post('/manager/create', 'ManagerController@create');//store new table
+$router->post('/manager/update/{id}', 'ManagerController@update');//edit table
+$router->get('/manager/delete/{id}', 'ManagerController@delete');//delete table
+
+
 $router->get('/book_in_stock', 'Book_in_stockController@index');//show all
 $router->get('/book_in_stock/edit/{id}/{id2}', 'Book_in_stockController@edit');
 $router->get('/book_in_stock/form', 'Book_in_stockController@form');
