@@ -56,6 +56,7 @@ $router->post('/customer/create', 'CustomerController@create');//store new table
 $router->post('/customer/update/{id}', 'CustomerController@update');//edit table
 $router->get('/customer/delete/{id}', 'CustomerController@delete');//delete table
 
+
 //publisher page
 $router->get('/publishers', 'PublisherController@index');//show all
 $router->get('/publisher/edit/{id}', 'PublisherController@edit');//edit
@@ -74,8 +75,14 @@ $router->post('/supply_log/create', 'Supply_logController@create');//store new t
 $router->post('/supply_log/update/{id}', 'Supply_logController@update');//edit table
 $router->get('/supply_log/delete/{id}', 'Supply_logController@delete');//delete table
 
-
-
+//employee page
+$router->get('/employees', 'EmployeeController@index');//show all
+$router->get('/employee/edit/{id}', 'EmployeeController@edit');//edit
+$router->get('/employee/form', 'EmployeeController@form');//form to create
+$router->get('/employee/detail/{id}', 'EmployeeController@read');//show detail
+$router->post('/employee/create', 'EmployeeController@create');//store new table
+$router->post('/employee/update/{id}', 'EmployeeController@update');//edit table
+$router->get('/employee/delete/{id}', 'EmployeeController@delete');//delete table
 
 
 
