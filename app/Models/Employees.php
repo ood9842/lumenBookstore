@@ -11,16 +11,17 @@ class Employees extends Model
      */
     protected $table = 'employees';
     public $incrementing=false;
+    public $timestamps = false;
 
 //relation
     public function staff()
     {
-        return $this->belongsTo('App\Models\Staffs');
+        return $this->belongsTo('App\Models\Staffs','Staff_id','staff_id');
     }
 
     public function work_on()
     {
-          return $this->belongsTo('App\Models\Stores');
+          return $this->belongsTo('App\Models\Stores','Store_id','store_workON');
     }
 
 
