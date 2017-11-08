@@ -10,6 +10,7 @@ class Managers extends Model
      * Get the phone record associated with the user.
      */
     protected $table = 'managers';
+    public $timestamps = false;
     public $incrementing=false;
 
 //relation
