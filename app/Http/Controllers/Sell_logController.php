@@ -63,6 +63,18 @@ class Sell_logController extends BaseController
       return redirect('/sell_logs');
     }
 
+    public function update_detail(Request $request, $id)
+    {
+      $sell_log=Sell_logs::findOrFail($id);
+      $sell_log->total_payment = Sell_details::where('sell_logs_id','=',$sell_log->Sell_logs_id)->sum('total_line');
+
+
+      $sell_log->save();//store
+      $sell_log->push();
+
+      return redirect('/sell_logs');
+    }
+
     public function delete($id)
     {
       $sell_log=Sell_logs::findOrFail($id);
