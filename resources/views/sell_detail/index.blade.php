@@ -12,8 +12,8 @@
     </tr>
     @foreach ($sell_details as $sell_detail)
     <tr>
-      <th>{{$sell_detail->sell_logs_id}}</th>
-      <th>{{$sell_detail->book_id}}</th>
+      <th><a href="/sell_log/detail/{{$sell_detail->sell_logs_id}}">{{$sell_detail->sell_logs_id}}</a></th>
+      <th><a href="/book/detail/{{$sell_detail->book_id}}">{{$sell_detail->book_id}}</a></th>
       <th>{{$sell_detail->book_name}}</th>
       <th>{{$sell_detail->price}}</th>
       <th>{{$sell_detail->amount}}</th>

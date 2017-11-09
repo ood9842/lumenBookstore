@@ -13,13 +13,14 @@
     @foreach ($supply_logs as $supply_log)
     <tr>
       <th>{{$supply_log->Slogs_id}}</th>
-      <th>{{$supply_log->stock_id}}</th>
-      <th>{{$supply_log->product_line_id}}</th>
+      <th><a href="/stock/detail/{{$supply_log->stock_id}}">{{$supply_log->stock_id}}</a></th>
+      <th><a href="/product_line/detail/{{$supply_log->product_line_id}}">{{$supply_log->product_line_id}}</a></th>
       <th>{{$supply_log->supply_date}}</th>
       <th>{{$supply_log->total_payment}}</th>
       <th>{{$supply_log->sentOrback}}</th>
       <th><a href="/supply_log/detail/{{$supply_log->Slogs_id}}">detail</a></th>
       <th><a href="/supply_log/edit/{{$supply_log->Slogs_id}}">edit</a></th>
+      <th><a href="/supply_log/update_detail/{{$supply_log->Slogs_id}}">update</a></th>
       <th><a href="/supply_log/delete/{{$supply_log->Slogs_id}}">delete</a></th>
     </tr>
     @endforeach

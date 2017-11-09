@@ -64,6 +64,17 @@ class Supply_logController extends BaseController
       return redirect('/supply_logs');
     }
 
+    public function update_detail(Request $request, $id)
+    {
+      $supply_log=Supply_logs::findOrFail($id);
+      $supply_log->total_payment = Supply_details::where('slogs_id','=',$supply_log->Slogs_id)->sum('total_line');
+
+      $supply_log->save();//store
+      $supply_log->push();
+
+      return redirect('/supply_logs');
+    }
+
     public function delete($id)
     {
       $supply_log=Supply_logs::findOrFail($id);

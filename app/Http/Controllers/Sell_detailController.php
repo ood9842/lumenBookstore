@@ -59,6 +59,7 @@ class Sell_detailController extends BaseController
       return redirect('/sell_details');
     }
 
+
     public function delete($id,$id2)
     {
       $sell_detail=Sell_details::where('sell_logs_id','=',$id)->where('book_id','=',$id2)->delete();

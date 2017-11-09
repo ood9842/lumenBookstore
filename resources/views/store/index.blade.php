@@ -11,7 +11,7 @@
     <tr>
       <th>{{$store->Store_id}}</th>
       <th>{{$store->address}}</th>
-      <th>{{$store->stock_id}}</th>
+      <th><a href="/stock/detail/{{$store->stock_id}}">{{$store->stock_id}}</a></th>
       <th><a href="/store/detail/{{$store->Store_id}}">detail</a></th>
       <th><a href="/store/edit/{{$store->Store_id}}">edit</a></th>
       <th><a href="/store/delete/{{$store->Store_id}}">delete</a></th>

@@ -8,8 +8,8 @@
     </tr>
     @foreach ($managers as $manager)
     <tr>
-      <th>{{$manager->staff_id}}</th>
-      <th>{{$manager->store_manageON}}</th>
+      <th><a href="/staff/detail/{{$manager->staff_id}}">{{$manager->staff_id}}</a></th>
+      <th><a href="/store/detail/{{$manager->store_manageON}}">{{$manager->store_manageON}}</a></th>
       <th><a href="/manager/detail/{{$manager->staff_id}}">detail</a></th>
       <th><a href="/manager/edit/{{$manager->staff_id}}">edit</a></th>
       <th><a href="/manager/delete/{{$manager->staff_id}}">delete</a></th>

@@ -74,6 +74,7 @@ $router->get('/supply_log/edit/{id}', 'Supply_logController@edit');//edit
 $router->get('/supply_log/form', 'Supply_logController@form');//form to create
 $router->get('/supply_log/detail/{id}', 'Supply_logController@read');//show detail
 $router->post('/supply_log/create', 'Supply_logController@create');//store new table
+$router->get('/supply_log/update_detail/{id}', 'Supply_logController@update_detail');
 $router->post('/supply_log/update/{id}', 'Supply_logController@update');//edit table
 $router->get('/supply_log/delete/{id}', 'Supply_logController@delete');//delete table
 
@@ -91,7 +92,8 @@ $router->get('/sell_logs', 'Sell_logController@index');//show all
 $router->get('/sell_log/edit/{id}', 'Sell_logController@edit');//edit
 $router->get('/sell_log/form', 'Sell_logController@form');//form to create
 $router->get('/sell_log/detail/{id}', 'Sell_logController@read');//show detail
-$router->post('/sell_log/create', 'Sell_logController@create');//store new table
+$router->post('/sell_log/create', 'Sell_logController@create');
+$router->get('/sell_log/update_detail/{id}', 'Sell_logController@update_detail');
 $router->post('/sell_log/update/{id}', 'Sell_logController@update');//edit table
 $router->get('/sell_log/delete/{id}', 'Sell_logController@delete');//delete table
 
