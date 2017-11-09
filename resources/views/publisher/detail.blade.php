@@ -2,7 +2,7 @@
 @section('content')
 
 
-  Book details<br>
+  Publisher details<br>
   {{$publisher->Publisher_id}}<br>
   {{$publisher->publisher_name}}<br>
 

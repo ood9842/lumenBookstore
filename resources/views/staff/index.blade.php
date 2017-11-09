@@ -5,14 +5,12 @@
     <tr>
       <th>Person ID</th>
       <th>Staff ID</th>
-      <th>Staff name</th>
       <th>Salary</th>
       <th>Work date</th>
     </tr>
     @foreach ($staffs as $staff)
     <tr>
-      <th>{{$staff->person_id}}</th>
-      <th>{{$staff->S_id}}</th>
+      <th><a href="/person/detail/{{$staff->person_id}}">{{$staff->person_id}}</a></th>
       <th>{{$staff->S_id}}</th>
       <th>{{$staff->salary}}</th>
       <th>{{$staff->work_on}}</th>

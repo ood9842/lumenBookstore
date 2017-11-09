@@ -8,8 +8,8 @@
     </tr>
     @foreach ($stock_keepers as $stock_keeper)
     <tr>
-      <th>{{$stock_keeper->staff_id}}</th>
-      <th>{{$stock_keeper->stock_workON}}</th>
+      <th><a href="/staff/detail/{{$stock_keeper->staff_id}}">{{$stock_keeper->staff_id}}</a></th>
+      <th><a href="/stock/detail/{{$stock_keeper->stock_workON}}">{{$stock_keeper->stock_workON}}</a></th>
       <th><a href="/stock_keeper/detail/{{$stock_keeper->staff_id}}">detail</a></th>
       <th><a href="/stock_keeper/edit/{{$stock_keeper->staff_id}}">edit</a></th>
       <th><a href="/stock_keeper/delete/{{$stock_keeper->staff_id}}">delete</a></th>

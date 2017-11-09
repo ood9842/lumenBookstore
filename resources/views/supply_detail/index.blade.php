@@ -12,8 +12,8 @@
     </tr>
     @foreach ($supply_details as $supply_detail)
     <tr>
-      <th>{{$supply_detail->slogs_id}}</th>
-      <th>{{$supply_detail->book_id}}</th>
+      <th><a href="/supply_log/detail/{{$supply_detail->slogs_id}}">{{$supply_detail->slogs_id}}</a></th>
+      <th><a href="/book/detail/{{$supply_detail->book_id}}">{{$supply_detail->book_id}}</a></th>
       <th>{{$supply_detail->book_name}}</th>
       <th>{{$supply_detail->price}}</th>
       <th>{{$supply_detail->amount}}</th>
