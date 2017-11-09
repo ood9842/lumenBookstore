@@ -54,7 +54,7 @@ class EmployeeController extends BaseController
     public function update(Request $request, $id,$id2)
     {
       $work_on = $request->input('store_workON');
-      $employee=Employees::where('staff_id','=',$id)->where('store_workON','=',$id2)->update(array('store_workON'=>$work_on));;
+      $employee=Employees::where('staff_id','=',$id)->where('store_workON','=',$id2)->update(array('store_workON'=>$work_on));
 
       // // $employee->store_workON = $request->input('store_workON');
       //

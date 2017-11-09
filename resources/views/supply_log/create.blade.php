@@ -17,10 +17,10 @@
     <label class="col-form-label" for="formGroupExampleInput">Supply date</label>
     <input type="int" class="form-control" name="date" placeholder="yyyy-mm-dd">
   </div>
-  <div class="form-group">
+  <!-- <div class="form-group">
     <label class="col-form-label" for="formGroupExampleInput">Total payment</label>
     <input type="int" class="form-control" name="payment">
-  </div>
+  </div> -->
   <div class="form-check">
   <label class="form-check-label">
     <input class="form-check-input" type="checkbox" name="srb" value="sent">
