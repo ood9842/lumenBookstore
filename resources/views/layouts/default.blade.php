@@ -5,9 +5,16 @@
     </head>
     <body>
         @include('layouts.navbar')
-        <div class="w3-main" style="margin-left:300px;margin-top:43px;">
-            @include('includes.header')
-            @yield('content')
+        <div class="container-fluid">
+            <div class="row" id="row-main">
+                <div class="col-md-3" id="sidebar">
+                   
+                </div>
+                <div class="col-md-9" id="content">
+                    @include('includes.header')
+                    @yield('content')
+                </div>
+            </div>
         </div>
     </body>
 </html>
