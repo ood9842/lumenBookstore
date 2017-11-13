@@ -8,11 +8,11 @@
     </tr>
     @foreach ($employees as $employee)
     <tr>
-      <th>{{$employee->staff_id}}</th>
-      <th>{{$employee->store_workON}}</th>
-      <th><a href="/employee/detail/{{$employee->staff_id}}">detail</a></th>
-      <th><a href="/employee/edit/{{$employee->staff_id}}">edit</a></th>
-      <th><a href="/employee/delete/{{$employee->staff_id}}">delete</a></th>
+      <th><a href="/staff/detail/{{$employee->staff_id}}">{{$employee->staff_id}}</a></th>
+      <th><a href="/store/detail/{{$employee->store_workON}}">{{$employee->store_workON}}</a></th>
+      <th><a href="/employee/detail/{{$employee->staff_id}}/{{$employee->store_workON}}">detail</a></th>
+      <th><a href="/employee/edit/{{$employee->staff_id}}/{{$employee->store_workON}}">edit</a></th>
+      <th><a href="/employee/delete/{{$employee->staff_id}}/{{$employee->store_workON}}">delete</a></th>
     </tr>
     @endforeach
   </table></center>

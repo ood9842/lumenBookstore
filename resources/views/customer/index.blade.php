@@ -12,8 +12,8 @@
     @foreach ($customers as $customer)
     <tr>
       <th>{{$customer->C_id}}</th>
-      <th>{{$customer->person_id}}</th>
-      <th>{{$customer->member_id}}</th>
+      <th><a href="/person/detail/{{$customer->person_id}}">{{$customer->person_id}}</a></th>
+      <th><a href="/store/detail/{{$customer->member_id}}">{{$customer->member_id}}</a></th>
       <th>{{$customer->points}}</th>
       <th>{{$customer->expired_date}}</th>
       <th><a href="/customer/detail/{{$customer->C_id}}">detail</a></th>

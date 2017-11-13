@@ -11,6 +11,7 @@ class Sell_details extends Model
      */
     protected $table = 'sell_details';
     public $incrementing=false;
+    public $timestamps = false;
 
 //relation
     public function sell_log()

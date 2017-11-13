@@ -12,12 +12,13 @@
     @foreach ($sell_logs as $sell_log)
     <tr>
       <th>{{$sell_log->Sell_logs_id}}</th>
-      <th>{{$sell_log->stock_id}}</th>
-      <th>{{$sell_log->customer_id}}</th>
+      <th><a href="/stock/detail/{{$sell_log->stock_id}}">{{$sell_log->stock_id}}</a></th>
+      <th><a href="/customer/detail/{{$sell_log->customer_id}}">{{$sell_log->customer_id}}</a></th>
       <th>{{$sell_log->sell_date}}</th>
       <th>{{$sell_log->total_payment}}</th>
       <th><a href="/sell_log/detail/{{$sell_log->Sell_logs_id}}">detail</a></th>
       <th><a href="/sell_log/edit/{{$sell_log->Sell_logs_id}}">edit</a></th>
+      <th><a href="/sell_log/update_detail/{{$sell_log->Sell_logs_id}}">update</a></th>
       <th><a href="/sell_log/delete/{{$sell_log->Sell_logs_id}}">delete</a></th>
     </tr>
     @endforeach
