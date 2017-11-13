@@ -1,3 +1,3 @@
-<header class="w3-container" style="padding-top:22px">
-    
-</header>
+<dive class="container-fluid">
+    @yield('header')
+</dive>
