@@ -1,6 +1,17 @@
 @extends('layouts.default')
+@section('header')
+<div class="container-fluid">
+  <div class="row">
+    <h1>Publisher List</h1>
+  </div>
+  <div class="row">
+    <a href="/publisher/form" class="btn btn-success" role="button" aria-pressed="true">Add Publisher</a>
+  </div>
+</div>
+@stop
 @section('content')
-<table class="table table-bordered table-responsive">
+<div class = "table-responsive">
+<table class="table table-bordered">
     <thead>
       <tr>
         <td scope="col">Publisher ID</td>
@@ -22,6 +33,5 @@
       @endforeach
     </tbody>
 </table>
-<!-- bottom to page create -->
-
+</div>
 @stop

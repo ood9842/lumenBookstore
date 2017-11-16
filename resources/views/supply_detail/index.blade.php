@@ -10,7 +10,8 @@
 </div>
 @stop
 @section('content')
-  <table class="table table-bordered table-responsive">
+<div class = "table-responsive">
+  <table class="table table-bordered">
     <div class="w3-container w3-white" >
     <tr>
       <td scope="col">Supply Logs ID</td>
@@ -37,5 +38,5 @@
     </tr>
     @endforeach
   </table>
-  <!-- bottom to page create -->
+</div>
 @stop

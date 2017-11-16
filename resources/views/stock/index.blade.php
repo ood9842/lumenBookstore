@@ -2,7 +2,7 @@
 @section('header')
 <div class="container-fluid">
   <div class="row">
-    <h1>Store</h1>
+    <h1>Stock List</h1>
   </div>
   <div class="row">
     <a href="/stock/form" class="btn btn-success" role="button" aria-pressed="true">Add Store</a>
@@ -10,7 +10,8 @@
 </div>
 @stop
 @section('content')
-  <table class="table table-bordered table-responsive">
+<div class = "table-responsive">
+  <table class="table table-bordered">
     <div class="w3-container w3-white" >
     <tr>
       <td scope="col">Stock ID</td>
@@ -31,5 +32,5 @@
     </tr>
     @endforeach
   </table>
-  <!-- bottom to page create -->
+</div>
 @stop

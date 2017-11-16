@@ -1,6 +1,17 @@
 @extends('layouts.default')
+@section('header')
+<div class="container-fluid">
+  <div class="row">
+    <h1>Customer</h1>
+  </div>
+  <div class="row">
+    <a href="/customer/form" class="btn btn-success" role="button" aria-pressed="true">Add Customer</a>
+  </div>
+</div>
+@stop
 @section('content')
-<table class="table table-bordered table-responsive">
+<div class = "table-responsive">
+<table class="table table-bordered">
     <thead>
       <tr>
         <td scope="col">Customer ID</td>
@@ -28,6 +39,5 @@
       @endforeach
     </tbody>
 </table>
-<!-- bottom to page create -->
-
+</div>
 @stop
