@@ -1,21 +1,37 @@
 @extends('layouts.default')
+@section('header')
+<div class="container-fluid">
+  <div class="row">
+    <h1>Product Line</h1>
+  </div>
+  <div class="row">
+    <a href="/product_line/form" class="btn btn-success" role="button" aria-pressed="true">Add Product Line</a>
+  </div>
+</div>
+@stop
 @section('content')
-  <center><table class="sortable" border="1" id="myTable" style="width:97%;">
-    <div class="w3-container w3-white" >
-    <tr>
-      <th>Product Line ID</th>
-      <th>Publisher ID</th>
-    </tr>
-    @foreach ($product_lines as $product_line)
-    <tr>
-      <th>{{$product_line->Product_line_id}}</th>
-      <th><a href="/publisher/detail/{{$product_line->publisher_id}}">{{$product_line->publisher_id}}</a></th>
-      <th><a href="/product_line/detail/{{$product_line->Product_line_id}}">detail</a></th>
-      <th><a href="/product_line/edit/{{$product_line->Product_line_id}}">edit</a></th>
-      <th><a href="/product_line/delete/{{$product_line->Product_line_id}}">delete</a></th>
-    </tr>
-    @endforeach
-  </table></center>
-  <!-- bottom to page create -->
-  <center><button class="w3-button w3-white"><a href="/product_line/form">add store</a></button></center>
+<table class="table table-bordered table-responsive">
+    <thead>
+      <tr>
+        <td scope="col">Product Line ID</td>
+        <td scope="col">Publisher ID</td>
+        <td scope="col">Operations</td>
+      </tr>
+    </thead>
+    <tbody>
+      @foreach ($product_lines as $product_line)
+      <tr>
+        <td>{{$product_line->Product_line_id}}</td>
+        <td><a href="/publisher/detail/{{$product_line->publisher_id}}">{{$product_line->publisher_id}}</a></td>
+        <td>
+        <a href="/product_line/detail/{{$product_line->Product_line_id}}" class="btn btn-secondary" role="button" aria-pressed="true">Deatail</a>
+        <a href="/product_line/edit/{{$product_line->Product_line_id}}" class="btn btn-primary" role="button" aria-pressed="true">Edit</a>
+        <a href="/product_line/delete/{{$product_line->Product_line_id}}" class="btn btn-danger" role="button" aria-pressed="true">Delete</a>
+        </td>
+      </tr>
+      @endforeach
+    </tbody>
+</table>
+<!-- bottom to page create -->
+
 @stop

@@ -1,21 +1,27 @@
 @extends('layouts.default')
 @section('content')
-  <center><table class="sortable" border="1" id="myTable" style="width:97%;">
-    <div class="w3-container w3-white" >
-    <tr>
-      <th>Publisher ID</th>
-      <th>Publisher name</th>
-    </tr>
-    @foreach ($publishers as $publisher)
-    <tr>
-      <th>{{$publisher->Publisher_id}}</th>
-      <th>{{$publisher->publisher_name}}</th>
-      <th><a href="/publisher/detail/{{$publisher->Publisher_id}}">detail</a></th>
-      <th><a href="/publisher/edit/{{$publisher->Publisher_id}}">edit</a></th>
-      <th><a href="/publisher/delete/{{$publisher->Publisher_id}}">delete</a></th>
-    </tr>
-    @endforeach
-  </table></center>
-  <!-- bottom to page create -->
-  <center><button class="w3-button w3-white"><a href="/publisher/form">add publisher</a></button></center>
+<table class="table table-bordered table-responsive">
+    <thead>
+      <tr>
+        <td scope="col">Publisher ID</td>
+        <td scope="col">Publisher Name</td>
+        <td scope="col">Operations</td>
+      </tr>
+    </thead>
+    <tbody>
+      @foreach ($publishers as $publisher)
+      <tr>
+        <td>{{$publisher->Publisher_id}}</</td>
+        <td>{{$publisher->publisher_name}}</td>
+        <td>
+        <a href="/publisher/detail/{{$publisher->Publisher_id}}" class="btn btn-secondary" role="button" aria-pressed="true">Deatail</a>
+        <a href="/publisher/edit/{{$publisher->Publisher_id}}" class="btn btn-primary" role="button" aria-pressed="true">Edit</a>
+        <a href="/publisher/delete/{{$publisher->Publisher_id}}" class="btn btn-danger" role="button" aria-pressed="true">Delete</a>
+        </td>
+      </tr>
+      @endforeach
+    </tbody>
+</table>
+<!-- bottom to page create -->
+
 @stop

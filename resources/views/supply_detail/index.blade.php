@@ -1,29 +1,41 @@
 @extends('layouts.default')
+@section('header')
+<div class="container-fluid">
+  <div class="row">
+    <h1>Supply detail</h1>
+  </div>
+  <div class="row">
+    <a href="/supply_detail/form" class="btn btn-success" role="button" aria-pressed="true">Add Supply detail</a>
+  </div>
+</div>
+@stop
 @section('content')
-  <center><table class="sortable" border="1" id="myTable" style="width:97%;">
+  <table class="table table-bordered table-responsive">
     <div class="w3-container w3-white" >
     <tr>
-      <th>Supply Logs ID</th>
-      <th>Book ID</th>
-      <th>Book Name</th>
-      <th>Price</th>
-      <th>Amount</th>
-      <th>Total Line</th>
+      <td scope="col">Supply Logs ID</td>
+      <td scope="col">Book ID</td>
+      <td scope="col">Book Name</td>
+      <td scope="col">Price</td>
+      <td scope="col">Amount</td>
+      <td scope="col">Total Line</td>
+      <td scope="col">Operations</td>
     </tr>
     @foreach ($supply_details as $supply_detail)
     <tr>
-      <th><a href="/supply_log/detail/{{$supply_detail->slogs_id}}">{{$supply_detail->slogs_id}}</a></th>
-      <th><a href="/book/detail/{{$supply_detail->book_id}}">{{$supply_detail->book_id}}</a></th>
-      <th>{{$supply_detail->book_name}}</th>
-      <th>{{$supply_detail->price}}</th>
-      <th>{{$supply_detail->amount}}</th>
-      <th>{{$supply_detail->total_line}}</th>
-      <th><a href="/supply_detail/detail/{{$supply_detail->slogs_id}}/{{$supply_detail->book_id}}">detail</a></th>
-      <th><a href="/supply_detail/edit/{{$supply_detail->slogs_id}}/{{$supply_detail->book_id}}">edit</a></th>
-      <th><a href="/supply_detail/delete/{{$supply_detail->slogs_id}}/{{$supply_detail->book_id}}">delete</a></th>
+      <td><a href="/supply_log/detail/{{$supply_detail->slogs_id}}">{{$supply_detail->slogs_id}}</a></td>
+      <td><a href="/book/detail/{{$supply_detail->book_id}}">{{$supply_detail->book_id}}</a></td>
+      <td>{{$supply_detail->book_name}}</td>
+      <td>{{$supply_detail->price}}</td>
+      <td>{{$supply_detail->amount}}</td>
+      <td>{{$supply_detail->total_line}}</td>
+      <td>
+      <a href="/supply_detail/detail/{{$supply_detail->slogs_id}}/{{$supply_detail->book_id}}" class="btn btn-secondary" role="button" aria-pressed="true">detail</a>
+      <a href="/supply_detail/edit/{{$supply_detail->slogs_id}}/{{$supply_detail->book_id}}" class="btn btn-primary"  role="button" aria-pressed="true">edit</a>
+      <a href="/supply_detail/delete/{{$supply_detail->slogs_id}}/{{$supply_detail->book_id}}"class="btn btn-danger" role="button" aria-pressed="true">delete</a>
+      </td>
     </tr>
     @endforeach
-  </table></center>
+  </table>
   <!-- bottom to page create -->
-  <center><button class="w3-button w3-white"><a href="/supply_detail/form">add supply detail</a></button></center>
 @stop
