@@ -5,12 +5,13 @@
     <h1>Manager List</h1>
   </div>
   <div class="row">
-    <a hhref="/manager/form" class="btn btn-success" role="button" aria-pressed="true">Add Manager</a>
+    <a href="/manager/form" class="btn btn-success" role="button" aria-pressed="true">Add Manager</a>
   </div>
 </div>
 @stop
 @section('content')
-<table class="table table-bordered table-responsive">
+<div class = "table-responsive">
+<table class="table table-bordered">
     <thead>
       <tr>
         <td scope="col">Staff ID</td>
@@ -32,6 +33,5 @@
       @endforeach
     </tbody>
 </table>
-<!-- bottom to page create -->
-
+</div>
 @stop
