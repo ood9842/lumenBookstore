@@ -1,21 +1,37 @@
 @extends('layouts.default')
+@section('header')
+<div class="container-fluid">
+  <div class="row">
+    <h1>Manager List</h1>
+  </div>
+  <div class="row">
+    <a hhref="/manager/form" class="btn btn-success" role="button" aria-pressed="true">Add Manager</a>
+  </div>
+</div>
+@stop
 @section('content')
-  <center><table class="sortable" border="1" id="myTable" style="width:97%;">
-    <div class="w3-container w3-white" >
-    <tr>
-      <th>Staff ID</th>
-      <th>Manage store</th>
-    </tr>
-    @foreach ($managers as $manager)
-    <tr>
-      <th><a href="/staff/detail/{{$manager->staff_id}}">{{$manager->staff_id}}</a></th>
-      <th><a href="/store/detail/{{$manager->store_manageON}}">{{$manager->store_manageON}}</a></th>
-      <th><a href="/manager/detail/{{$manager->staff_id}}">detail</a></th>
-      <th><a href="/manager/edit/{{$manager->staff_id}}">edit</a></th>
-      <th><a href="/manager/delete/{{$manager->staff_id}}">delete</a></th>
-    </tr>
-    @endforeach
-  </table></center>
-  <!-- bottom to page create -->
-  <center><button class="w3-button w3-white"><a href="/manager/form">add manager</a></button></center>
+<table class="table table-bordered table-responsive">
+    <thead>
+      <tr>
+        <td scope="col">Staff ID</td>
+        <td scope="col">Manage store</td>
+        <td scope="col">Operations</td>
+      </tr>
+    </thead>
+    <tbody>
+      @foreach ($managers as $manager)
+      <tr>
+        <td><a href="/staff/detail/{{$manager->staff_id}}">{{$manager->staff_id}}</a></td>
+        <td><a href="/store/detail/{{$manager->store_manageON}}">{{$manager->store_manageON}}</a></td>
+        <td>
+        <a href="/staff/detail/{{$manager->staff_id}}" class="btn btn-secondary" role="button" aria-pressed="true">Deatail</a>
+        <a href="/staff/edit/{{$manager->staff_id}}" class="btn btn-primary" role="button" aria-pressed="true">Edit</a>
+        <a href="/staffdelete/{{$manager->staff_id}}" class="btn btn-danger" role="button" aria-pressed="true">Delete</a>
+        </td>
+      </tr>
+      @endforeach
+    </tbody>
+</table>
+<!-- bottom to page create -->
+
 @stop

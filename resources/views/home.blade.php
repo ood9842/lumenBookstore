@@ -169,9 +169,6 @@
     <div class="w3-quarter">
         <div class="w3-container w3-teal w3-padding-16">
             <div class="w3-left"><i class="fa fa-database w3-xxxlarge"></i></div>
-            <div class="w3-right">
-                <h3>52</h3>
-            </div>
             <div class="w3-clear"></div>
             <a href="/supply_details"><h4>Supply Detail</h4></a>
         </div>
@@ -180,9 +177,6 @@
     <div class="w3-quarter">
         <div class="w3-container w3-blue w3-padding-16">
             <div class="w3-left"><i class="fa fa-database w3-xxxlarge"></i></div>
-            <div class="w3-right">
-                <h3>52</h3>
-            </div>
             <div class="w3-clear"></div>
             <a href="/supply_logs"><h4>Supply Logs</h4></a>
         </div>

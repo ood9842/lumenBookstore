@@ -1,28 +1,40 @@
 @extends('layouts.default')
+@section('header')
+<div class="container-fluid">
+  <div class="row">
+    <h1>Sell log</h1>
+  </div>
+  <div class="row">
+    <a href="/sell_log/form" class="btn btn-success" role="button" aria-pressed="true">Add Sell Log</a>
+  </div>
+</div>
+@stop
 @section('content')
-  <center><table class="sortable" border="1" id="myTable" style="width:97%;">
+  <table class="table table-bordered table-responsive">
     <div class="w3-container w3-white" >
     <tr>
-      <th>Sell log ID</th>
-      <th>Stock ID</th>
-      <th>Customer ID</th>
-      <th>Date</th>
-      <th>total payment</th>
+      <td scope="col">Sell log ID</td>
+      <td scope="col">Stock ID</td>
+      <td scope="col">Customer ID</td>
+      <td scope="col">Date</td>
+      <td scope="col">total payment</td>
+      <td scope="col">Operations</td>
     </tr>
     @foreach ($sell_logs as $sell_log)
     <tr>
-      <th>{{$sell_log->Sell_logs_id}}</th>
-      <th><a href="/stock/detail/{{$sell_log->stock_id}}">{{$sell_log->stock_id}}</a></th>
-      <th><a href="/customer/detail/{{$sell_log->customer_id}}">{{$sell_log->customer_id}}</a></th>
-      <th>{{$sell_log->sell_date}}</th>
-      <th>{{$sell_log->total_payment}}</th>
-      <th><a href="/sell_log/detail/{{$sell_log->Sell_logs_id}}">detail</a></th>
-      <th><a href="/sell_log/edit/{{$sell_log->Sell_logs_id}}">edit</a></th>
-      <th><a href="/sell_log/update_detail/{{$sell_log->Sell_logs_id}}">update</a></th>
-      <th><a href="/sell_log/delete/{{$sell_log->Sell_logs_id}}">delete</a></th>
+      <td>{{$sell_log->Sell_logs_id}}</td>
+      <td><a href="/stock/detail/{{$sell_log->stock_id}}">{{$sell_log->stock_id}}</a></td>
+      <td><a href="/customer/detail/{{$sell_log->customer_id}}">{{$sell_log->customer_id}}</a></td>
+      <td>{{$sell_log->sell_date}}</td>
+      <td>{{$sell_log->total_payment}}</td>
+      <td>
+      <a href="/sell_log/detail/{{$sell_log->Sell_logs_id}}" class="btn btn-secondary" role="button" aria-pressed="true">detail</a>
+      <a href="/sell_log/edit/{{$sell_log->Sell_logs_id}}" class="btn btn-primary" role="button" aria-pressed="true">edit</a>
+      <a href="/sell_log/update_detail/{{$sell_log->Sell_logs_id}}" class="btn btn-primary" role="button" aria-pressed="true">update</a>
+      <a href="/sell_log/delete/{{$sell_log->Sell_logs_id}}" class="btn btn-danger" role="button" aria-pressed="true" >delete</a>
+      </td>
     </tr>
     @endforeach
-  </table></center>
+  </table>
   <!-- bottom to page create -->
-  <center><button class="w3-button w3-white"><a href="/sell_log/form">add sell log</a></button></center>
 @stop
