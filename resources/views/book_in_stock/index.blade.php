@@ -1,23 +1,37 @@
 @extends('layouts.default')
+ 
+@section('header')
+<div class="container-fluid">
+  <div class="row">
+    <h1>Book in Stock</h1>
+  </div>
+</div>
+@stop
 @section('content')
-  <center><table class="sortable" border="1" id="myTable" style="width:97%;">
-    <div class="w3-container w3-white" >
-    <tr>
-      <th>Stock ID</th>
-      <th>Book ID</th>
-      <th>Amount</th>
-    </tr>
-    @foreach ($book_in_stocks as $book_in_stock)
-    <tr>
-      <th><a href="/stock/detail/{{$book_in_stock->stock_id}}">{{$book_in_stock->stock_id}}</a></th>
-      <th><a href="/book/detail/{{$book_in_stock->book_id}}">{{$book_in_stock->book_id}}</a></th>
-      <th>{{$book_in_stock->amount}}</th>
-      <th><a href="/book_in_stock/detail/{{$book_in_stock->stock_id}}/{{$book_in_stock->book_id}}">detail</a></th>
-      <th><a href="/book_in_stock/edit/{{$book_in_stock->stock_id}}/{{$book_in_stock->book_id}}">edit</a></th>
-      <th><a href="/book_in_stock/delete/{{$book_in_stock->stock_id}}/{{$book_in_stock->book_id}}">delete</a></th>
-    </tr>
-    @endforeach
-  </table></center>
-  <!-- bottom to page create -->
-  <center><button class="w3-button w3-white"><a href="/book_in_stock/form">add employee</a></button></center>
+<table class="table table-bordered table-responsive">
+    <thead>
+      <tr>
+        <td scope="col">Stock ID</td>
+        <td scope="col">Book ID</td>
+        <td scope="col">Amount</td>
+        <td scope="col">Operations</td>
+      </tr>
+    </thead>
+    <tbody>
+      @foreach ($book_in_stocks as $book_in_stock)
+      <tr>
+        <td><a href="/stock/detail/{{$book_in_stock->stock_id}}">{{$book_in_stock->stock_id}}</a></td>
+        <td><a href="/book/detail/{{$book_in_stock->book_id}}">{{$book_in_stock->book_id}}</a></td>
+        <td>{{$book_in_stock->amount}}</td>
+        <td>
+        <a href="/book_in_stock/detail/{{$book_in_stock->stock_id}}/{{$book_in_stock->book_id}}" class="btn btn-secondary" role="button" aria-pressed="true">Deatail</a>
+        <a href="/book_in_stock/edit/{{$book_in_stock->stock_id}}/{{$book_in_stock->book_id}}" class="btn btn-primary" role="button" aria-pressed="true">Edit</a>
+        <a href="/book_in_stock/delete/{{$book_in_stock->stock_id}}/{{$book_in_stock->book_id}}" class="btn btn-danger" role="button" aria-pressed="true">Delete</a>
+        </td>
+      </tr>
+      @endforeach
+    </tbody>
+</table>
+<!-- bottom to page create -->
+
 @stop

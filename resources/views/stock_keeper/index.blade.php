@@ -1,21 +1,34 @@
 @extends('layouts.default')
+@section('header')
+<div class="container-fluid">
+  <div class="row">
+    <h1>Stock Keeper</h1>
+  </div>
+  <div class="row">
+    <a href="/stock_keeper/form" class="btn btn-success" role="button" aria-pressed="true">Add Stock Keeper</a>
+  </div>
+</div>
+@stop
 @section('content')
-  <center><table class="sortable" border="1" id="myTable" style="width:97%;">
+  <table class="table table-bordered table-responsive">
     <div class="w3-container w3-white" >
     <tr>
-      <th>Staff ID</th>
-      <th>Work on stock</th>
+      <td scope="col">Staff ID</td>
+      <td scope="col">Work on stock</td>
+      <td scope="col">Operations</td>
     </tr>
     @foreach ($stock_keepers as $stock_keeper)
     <tr>
-      <th><a href="/staff/detail/{{$stock_keeper->staff_id}}">{{$stock_keeper->staff_id}}</a></th>
-      <th><a href="/stock/detail/{{$stock_keeper->stock_workON}}">{{$stock_keeper->stock_workON}}</a></th>
-      <th><a href="/stock_keeper/detail/{{$stock_keeper->staff_id}}">detail</a></th>
-      <th><a href="/stock_keeper/edit/{{$stock_keeper->staff_id}}">edit</a></th>
-      <th><a href="/stock_keeper/delete/{{$stock_keeper->staff_id}}">delete</a></th>
+      <td><a href="/staff/detail/{{$stock_keeper->staff_id}}">{{$stock_keeper->staff_id}}</a></td>
+      <td><a href="/stock/detail/{{$stock_keeper->stock_workON}}">{{$stock_keeper->stock_workON}}</a></td>
+      <td>
+      <a href="/stock_keeper/detail/{{$stock_keeper->staff_id}}" class="btn btn-secondary" role="button" aria-pressed="true">detail</a>
+      <a href="/stock_keeper/edit/{{$stock_keeper->staff_id}}" class="btn btn-primary" role="button" aria-pressed="true">edit</a>
+      <a href="/stock_keeper/delete/{{$stock_keeper->staff_id}}" class="btn btn-danger" role="button" aria-pressed="true">delete</a>
+      </td>
     </tr>
     @endforeach
-  </table></center>
+  </table>
   <!-- bottom to page create -->
-  <center><button class="w3-button w3-white"><a href="/stock_keeper/form">add stock keeper</a></button></center>
+ 
 @stop
