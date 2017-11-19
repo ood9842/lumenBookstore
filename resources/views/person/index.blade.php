@@ -25,7 +25,7 @@
       @foreach ($persons as $person)
       <tr>
         <td>{{$person->P_id}}</td>
-        <td>{$person->first_name}}</td>
+        <td>{{$person->first_name}}</td>
         <td>{{$person->last_name}}</td>
         <td>
         <a href="/person/detail/{{$person->P_id}}" class="btn btn-secondary" role="button" aria-pressed="true">Deatail</a>

@@ -1,11 +1,17 @@
 @extends('layouts.default')
 @section('content')
-  Book details<br>
-  {{$book->Book_id}}<br>
-  {{$book->Book_name}}<br>
-  {{$book->type}}<br>
-  {{$book->edition}}<br>
-  {{$book->publisher_name}}<br>
-  {{$book->published_year}}<br>
-  {{$book->price}}<br>
+<div class="container">
+  <h2>Book Deatil</h2>
+  <div class="card">
+    <div class="card-body">
+      Book ID:{{$book->Book_id}}<br>
+      Name:{{$book->Book_name}}<br>
+      Type:{{$book->type}}<br>
+      Edition:{{$book->edition}}<br>
+      Publisher:{{$book->publisher_name}}<br>
+      Published Year:{{$book->published_year}}<br>
+      Price:{{$book->price}}<br>
+    </div>
+  </div>
+</div>
 @stop
