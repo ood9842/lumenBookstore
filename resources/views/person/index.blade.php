@@ -11,7 +11,8 @@
 </div>
 @stop
 @section('content')
-<table class="table table-bordered table-responsive">
+<div class = "table-responsive">
+<table class="table table-bordered">
     <thead>
       <tr>
         <td scope="col">Person ID</td>
@@ -24,7 +25,7 @@
       @foreach ($persons as $person)
       <tr>
         <td>{{$person->P_id}}</td>
-        <td>{$person->first_name}}</td>
+        <td>{{$person->first_name}}</td>
         <td>{{$person->last_name}}</td>
         <td>
         <a href="/person/detail/{{$person->P_id}}" class="btn btn-secondary" role="button" aria-pressed="true">Deatail</a>
@@ -35,6 +36,5 @@
       @endforeach
     </tbody>
 </table>
-<!-- bottom to page create -->
-
+</div>
 @stop

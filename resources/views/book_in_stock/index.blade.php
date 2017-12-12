@@ -1,14 +1,17 @@
 @extends('layouts.default')
- 
-@section('header')
+ @section('header')
 <div class="container-fluid">
   <div class="row">
     <h1>Book in Stock</h1>
   </div>
+  <div class="row">
+    <a href="/book_in_stock/form" class="btn btn-success" role="button" aria-pressed="true">Add Book in stock</a>
+  </div>
 </div>
 @stop
 @section('content')
-<table class="table table-bordered table-responsive">
+<div class = "table-responsive">
+<table class="table table-bordered">
     <thead>
       <tr>
         <td scope="col">Stock ID</td>
@@ -32,6 +35,5 @@
       @endforeach
     </tbody>
 </table>
-<!-- bottom to page create -->
-
+</div>
 @stop

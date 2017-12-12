@@ -10,7 +10,8 @@
 </div>
 @stop
 @section('content')
-<table class="table table-bordered table-responsive">
+<div class = "table-responsive">
+<table class="table table-bordered">
     <thead>
       <tr>
         <td scope="col">Book ID</td>
@@ -42,5 +43,5 @@
       @endforeach
     </tbody>
 </table>
-<!-- bottom to page create -->
+</div>
 @stop

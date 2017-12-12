@@ -5,12 +5,13 @@
     <h1>Manager List</h1>
   </div>
   <div class="row">
-    <a hhref="/manager/form" class="btn btn-success" role="button" aria-pressed="true">Add Manager</a>
+    <a href="/manager/form" class="btn btn-success" role="button" aria-pressed="true">Add Manager</a>
   </div>
 </div>
 @stop
 @section('content')
-<table class="table table-bordered table-responsive">
+<div class = "table-responsive">
+<table class="table table-bordered">
     <thead>
       <tr>
         <td scope="col">Staff ID</td>
@@ -24,7 +25,7 @@
         <td><a href="/staff/detail/{{$manager->staff_id}}">{{$manager->staff_id}}</a></td>
         <td><a href="/store/detail/{{$manager->store_manageON}}">{{$manager->store_manageON}}</a></td>
         <td>
-        <a href="/staff/detail/{{$manager->staff_id}}" class="btn btn-secondary" role="button" aria-pressed="true">Deatail</a>
+        <a href="/staff/detail/{{$manager->staff_id}}" class="btn btn-secondary" role="button" aria-pressed="true">Detail</a>
         <a href="/staff/edit/{{$manager->staff_id}}" class="btn btn-primary" role="button" aria-pressed="true">Edit</a>
         <a href="/staffdelete/{{$manager->staff_id}}" class="btn btn-danger" role="button" aria-pressed="true">Delete</a>
         </td>
@@ -32,6 +33,5 @@
       @endforeach
     </tbody>
 </table>
-<!-- bottom to page create -->
-
+</div>
 @stop
