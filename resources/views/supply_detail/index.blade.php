@@ -4,7 +4,9 @@
   <div class="row">
     <h1>Supply detail</h1>
   </div>
-  <div class="row">
+  <div class="form-inline row">
+    <label class="sr-only" for="inlineFormInput">Search</label>
+    <input class="form-control mb-2 mr-sm-2 mb-sm-0" id="myInput" type="text" placeholder="Search..">
     <a href="/supply_detail/form" class="btn btn-success" role="button" aria-pressed="true">Add Supply detail</a>
   </div>
 </div>
@@ -22,6 +24,7 @@
       <td scope="col">Total Line</td>
       <td scope="col">Operations</td>
     </tr>
+    <tbody id="myTable">
     @foreach ($supply_details as $supply_detail)
     <tr>
       <td><a href="/supply_log/detail/{{$supply_detail->slogs_id}}">{{$supply_detail->slogs_id}}</a></td>
@@ -37,6 +40,7 @@
       </td>
     </tr>
     @endforeach
+    </tbody>
   </table>
 </div>
 @stop

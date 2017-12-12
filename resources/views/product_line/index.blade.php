@@ -4,7 +4,9 @@
   <div class="row">
     <h1>Product Line</h1>
   </div>
-  <div class="row">
+  <div class="form-inline row">
+    <label class="sr-only" for="inlineFormInput">Search</label>
+    <input class="form-control mb-2 mr-sm-2 mb-sm-0" id="myInput" type="text" placeholder="Search..">
     <a href="/product_line/form" class="btn btn-success" role="button" aria-pressed="true">Add Product Line</a>
   </div>
 </div>
@@ -19,7 +21,7 @@
         <td scope="col">Operations</td>
       </tr>
     </thead>
-    <tbody>
+    <tbody id="myTable">
       @foreach ($product_lines as $product_line)
       <tr>
         <td>{{$product_line->Product_line_id}}</td>

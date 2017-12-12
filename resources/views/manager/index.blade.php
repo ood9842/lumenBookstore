@@ -4,7 +4,9 @@
   <div class="row">
     <h1>Manager List</h1>
   </div>
-  <div class="row">
+  <div class="form-inline row">
+    <label class="sr-only" for="inlineFormInput">Search</label>
+    <input class="form-control mb-2 mr-sm-2 mb-sm-0" id="myInput" type="text" placeholder="Search..">
     <a href="/manager/form" class="btn btn-success" role="button" aria-pressed="true">Add Manager</a>
   </div>
 </div>
@@ -19,7 +21,7 @@
         <td scope="col">Operations</td>
       </tr>
     </thead>
-    <tbody>
+    <tbody id="myTable">
       @foreach ($managers as $manager)
       <tr>
         <td><a href="/staff/detail/{{$manager->staff_id}}">{{$manager->staff_id}}</a></td>

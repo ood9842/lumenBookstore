@@ -4,7 +4,9 @@
   <div class="row">
     <h1>Sell details</h1>
   </div>
-  <div class="row">
+  <div class="form-inline row">
+    <label class="sr-only" for="inlineFormInput">Search</label>
+    <input class="form-control mb-2 mr-sm-2 mb-sm-0" id="myInput" type="text" placeholder="Search..">
     <a href="/sell_detail/form" class="btn btn-success" role="button" aria-pressed="true">Add Sell detail</a>
   </div>
 </div>
@@ -22,6 +24,7 @@
       <td scope="col">Total Line</td>
       <td scope="col">Operations</td>
     </tr>
+    <tbody id="myTable">
     @foreach ($sell_details as $sell_detail)
     <tr>
       <td><a href="/sell_log/detail/{{$sell_detail->sell_logs_id}}">{{$sell_detail->sell_logs_id}}</a></td>
@@ -38,6 +41,7 @@
       </td>
     </tr>
     @endforeach
+    </tbody>
   </table>
  </div>
 @stop
