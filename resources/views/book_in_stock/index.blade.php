@@ -4,7 +4,9 @@
   <div class="row">
     <h1>Book in Stock</h1>
   </div>
-  <div class="row">
+  <div class="form-inline row">
+    <label class="sr-only" for="inlineFormInput">Search</label>
+    <input class="form-control mb-2 mr-sm-2 mb-sm-0" id="myInput" type="text" placeholder="Search..">
     <a href="/book_in_stock/form" class="btn btn-success" role="button" aria-pressed="true">Add Book in stock</a>
   </div>
 </div>
@@ -20,7 +22,7 @@
         <td scope="col">Operations</td>
       </tr>
     </thead>
-    <tbody>
+    <tbody id="myTable">
       @foreach ($book_in_stocks as $book_in_stock)
       <tr>
         <td><a href="/stock/detail/{{$book_in_stock->stock_id}}">{{$book_in_stock->stock_id}}</a></td>

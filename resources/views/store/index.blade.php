@@ -4,7 +4,9 @@
   <div class="row">
     <h1>Store List</h1>
   </div>
-  <div class="row">
+  <div class="form-inline row">
+    <label class="sr-only" for="inlineFormInput">Search</label>
+    <input class="form-control mb-2 mr-sm-2 mb-sm-0" id="myInput" type="text" placeholder="Search..">
     <a href="/store/form" class="btn btn-success" role="button" aria-pressed="true">Add Store</a>
   </div>
 </div>
@@ -19,6 +21,7 @@
       <td scope="col">Stock ID</td>
       <td scope="col">Operations</td>
     </tr>
+    <tbody id="myTable">
     @foreach ($stores as $store)
     <tr>
       <td>{{$store->Store_id}}</td>
@@ -31,6 +34,7 @@
       </td>
     </tr>
     @endforeach
+    </tbody>
   </table>
 </div>
 @stop

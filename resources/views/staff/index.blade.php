@@ -4,7 +4,9 @@
   <div class="row">
     <h1>Staff</h1>
   </div>
-  <div class="row">
+  <div class="form-inline row">
+    <label class="sr-only" for="inlineFormInput">Search</label>
+    <input class="form-control mb-2 mr-sm-2 mb-sm-0" id="myInput" type="text" placeholder="Search..">
     <a href="/staff/form" class="btn btn-success" role="button" aria-pressed="true">Add Staff</a>
   </div>
 </div>
@@ -20,6 +22,7 @@
       <td scope="col">Work date</td>
       <td scope="col">Operations</td>
     </tr>
+    <tbody id="myTable">
     @foreach ($staffs as $staff)
     <tr>
       <td><a href="/person/detail/{{$staff->person_id}}">{{$staff->person_id}}</a></td>
@@ -33,6 +36,7 @@
       </td>
     </tr>
     @endforeach
+    </tbody>
   </table>
 </div>
 @stop

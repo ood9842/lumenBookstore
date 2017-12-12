@@ -1,11 +1,12 @@
 @extends('layouts.default')
-
 @section('header')
 <div class="container-fluid">
   <div class="row">
     <h1>Person</h1>
   </div>
-  <div class="row">
+  <div class="form-inline row">
+    <label class="sr-only" for="inlineFormInput">Search</label>
+    <input class="form-control mb-2 mr-sm-2 mb-sm-0" id="myInput" type="text" placeholder="Search..">
     <a href="/person/form" class="btn btn-success" role="button" aria-pressed="true">Add Person</a>
   </div>
 </div>
@@ -21,7 +22,7 @@
         <td scope="col">Operations</td>
       </tr>
     </thead>
-    <tbody>
+    <tbody id="myTable">
       @foreach ($persons as $person)
       <tr>
         <td>{{$person->P_id}}</td>
