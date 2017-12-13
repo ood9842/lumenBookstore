@@ -14,12 +14,11 @@
 /*$router->get('/', function () use ($router) {
     return $router->app->version();
 });*/
-
 //Index Page
-$router->get('/', 'Controller@index');
+$router->get('/', 'Controller@selltoday');
 //error Page
 $router->get('/errors/page', 'Controller@errors');
-
+$router->get('/chart/data/sell', 'ChartsController@sellChartData');
 //book page
 $router->get('/books', 'BookController@index');//show all
 $router->get('/book/edit/{id}', 'BookController@edit');//edit
