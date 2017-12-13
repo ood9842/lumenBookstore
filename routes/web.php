@@ -15,7 +15,7 @@
     return $router->app->version();
 });*/
 //Index Page
-$router->get('/', 'Controller@index');
+$router->get('/', 'Controller@selltoday');
 //error Page
 $router->get('/errors/page', 'Controller@errors');
 $router->get('/chart/data/sell', 'ChartsController@sellChartData');
