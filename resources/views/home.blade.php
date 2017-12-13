@@ -85,7 +85,24 @@
         <div class="col">
             <div class="card bg-light mb-3" style="height: 26rem;">
                 <div class="card-header" style="position:fix;">Bestseller</div>
-                    <p clase="card-text"></p>
+                    <p clase="card-text">
+                      <table class="table table-bordered">
+                        <thead>
+                          <tr>
+                            <td scope="col">Book Name</td>
+                            <td scope="col">Amount</td>
+                          </tr>
+                        </thead>
+                        <tbody id="myTable">
+                        @foreach ($devlist as $devlist)
+                        <tr>
+                          <td>{{$devlist->name}}</td>
+                          <td>{{$devlist->amount}}</td>
+                        </tr>
+                        @endforeach
+                      </tbody>
+                  </table>
+                    </p>
                 </div>
             </div>
         </div>

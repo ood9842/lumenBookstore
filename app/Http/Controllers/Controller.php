@@ -19,9 +19,12 @@ class Controller extends BaseController
 
   public function selltoday()
   {
-    $devlist = DB::table('sell_logs')
-        ->select(DB::raw('sell_date as date'), DB::raw("total_payment as today"))
-        ->orderby('sell_date')
+    $devlist = DB::table('sell_details')
+        ->join('sell_logs', 'sell_logs.Sell_logs_id', '=', 'sell_details.sell_logs_id')
+        ->select(DB::raw('book_name as name'), DB::raw("SUM(amount) as amount"))
+        ->groupBy('name')
+        ->orderby('amount', 'desc')
+        ->limit(5)
         ->get();
 
     return view('home', compact('devlist'));
