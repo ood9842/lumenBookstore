@@ -1,5 +1,5 @@
 <br><div class="container">
-  <h5>Dashboard</h5>
+  <h5>Bookstore Admin</h5>
 </div>
 <!--<div class="list-group">
   <a href="/" class="list-group-item active">
@@ -24,20 +24,48 @@
  </div><br><br><br>-->
 <div class="w3-bar-block">
     <a href="/" class="w3-bar-item w3-button w3-padding w3-blue"><i class="fa fa-users fa-fw"></i>Overview</a>
-    <a href="/books" class="w3-bar-item w3-button w3-padding"><i class="fa fa-book fa-fw"></i>Book</a>
-    <a href="/book_in_stocks" class="w3-bar-item w3-button w3-padding"><i class="fa fa-book fa-fw"></i>Book In Stock</a>
-    <a href="/customers" class="w3-bar-item w3-button w3-padding"><i class="fa fa-user fa-fw"></i>Customers</a>
-    <a href="/persons" class="w3-bar-item w3-button w3-padding"><i class="fa fa-user fa-fw"></i>Persons</a>
-    <a href="/staffs" class="w3-bar-item w3-button w3-padding"><i class="fa fa-user fa-fw"></i>Staffs</a>
-    <a href="/managers" class="w3-bar-item w3-button w3-padding"><i class="fa fa-user fa-fw"></i>Managers</a>
-    <a href="/employees" class="w3-bar-item w3-button w3-padding"><i class="fa fa-user fa-fw"></i>Employees</a>
-    <a href="/stock_keepers" class="w3-bar-item w3-button w3-padding"><i class="fa fa-user fa-fw"></i>Stock Keepers</a>
-    <a href="/stores" class="w3-bar-item w3-button w3-padding"><i class="fa fa-cog fa-fw"></i>Store</a>
-    <a href="/stocks" class="w3-bar-item w3-button w3-padding"><i class="fa fa-cog fa-fw"></i>Stocks</a>
-    <a href="/publishers" class="w3-bar-item w3-button w3-padding"><i class="fa fa-cog fa-fw"></i>Publishers</a>
-    <a href="/product_lines" class="w3-bar-item w3-button w3-padding"><i class="fa fa-cog fa-fw"></i>Product Lines</a>
-    <a href="/sell_details" class="w3-bar-item w3-button w3-padding"><i class="fa fa-cog fa-fw"></i>Sell Detail</a>
-    <a href="/sell_logs" class="w3-bar-item w3-button w3-padding"><i class="fa fa-cog fa-fw"></i>Sell Logs</a>
-    <a href="/supply_details" class="w3-bar-item w3-button w3-padding"><i class="fa fa-cog fa-fw"></i>Supply Detail</a>
-    <a href="/supply_logs" class="w3-bar-item w3-button w3-padding"><i class="fa fa-cog fa-fw"></i>Supply Logs</a>
+    <div class="dropdown show">
+  <a class="btn dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <span><i class="fa fa-book fa-fw"></i>About Book</span>
+  </a>
+
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+    <a class="dropdown-item w3-bar-item w3-button w3-padding" href="/books" >Book</a>
+    <a class="dropdown-item w3-bar-item w3-button w3-padding" href="/book_in_stocks" >Book In Stock</a>
+  </div>
+</div>
+
+<div class="dropdown show">
+  <a class="btn dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <span><i class="fa fa-user fa-fw"></i>About persons</span>
+  </a>
+
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+    <a class="dropdown-item w3-bar-item w3-button w3-padding" href="/customers" >Customers</a>
+    <a class="dropdown-item w3-bar-item w3-button w3-padding" href="/persons" >Persons</a>
+    <a class="dropdown-item w3-bar-item w3-button w3-padding" href="/staffs" >Staffs</a>
+    <a class="dropdown-item w3-bar-item w3-button w3-padding" href="/managers" >Managers</a>
+    <a class="dropdown-item w3-bar-item w3-button w3-padding" href="/employees" >Employees</a>
+    <a class="dropdown-item w3-bar-item w3-button w3-padding" href="/stock_keepers" >Stock Keepers</a>
+  </div>
+</div>
+
+<div class="dropdown show">
+  <a class="btn dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <span><i class="fa fa-cog fa-fw"></i>About Stores</span>
+  </a>
+
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuLink" >
+    <a class="dropdown-item w3-bar-item w3-button w3-padding" href="/stores" >Store</a>
+    <a class="dropdown-item w3-bar-item w3-button w3-padding" href="/stocks" >Stocks</a>
+    <a class="dropdown-item w3-bar-item w3-button w3-padding" href="/publishers" >Publishers</a>
+    <a class="dropdown-item w3-bar-item w3-button w3-padding" href="/product_lines" >Product Lines</a>
+    <a class="dropdown-item w3-bar-item w3-button w3-padding" href="/sell_details" >Sell Detail</a>
+    <a class="dropdown-item w3-bar-item w3-button w3-padding" href="/sell_logs" >Sell Logs</a>
+    <a class="dropdown-item w3-bar-item w3-button w3-padding" href="/supply_details" >Supply Detail</a>
+    <a class="dropdown-item w3-bar-item w3-button w3-padding" href="/supply_logs" >Supply Logs</a>
+  </div>
+</div>
+
+    
 </div><br><br><br>
