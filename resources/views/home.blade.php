@@ -44,8 +44,9 @@
 </div>
 <!--CONTENT-->
 <div class="container-fluid">
+    <!--ROW1-->
     <div class="row">
-        <!--Charts-->
+        <!--CHARTS-->
         <div class="col">
             <header class="container"><h3>Sales/Month</h3></header>
             <div class="chart-container" style="position: relative;">
@@ -81,49 +82,80 @@
                 </script>
             </div>
         </div>
-        <!--Card 1-->
-        <div class="col">
-            <div class="card bg-light mb-3" style="height: 26rem;">
+        <!--CARD-->
+        <div class="col"><br>
+            <div class="card bg-light mb-3">
                 <div class="card-header" style="position:fix;">Bestseller</div>
-                    <p clase="card-text">
-                      <table class="table table-bordered">
-                        <thead>
-                          <tr>
-                            <td scope="col">Book Name</td>
-                            <td scope="col">Amount</td>
-                          </tr>
-                        </thead>
-                        <tbody id="myTable">
-                        @foreach ($devlist as $devlist)
-                        <tr>
-                          <td>{{$devlist->name}}</td>
-                          <td>{{$devlist->amount}}</td>
-                        </tr>
-                        @endforeach
-                      </tbody>
-                  </table>
-                    </p>
+                    <div class="card-body">
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                <td scope="col">Book Name</td>
+                                <td scope="col">Amount</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                            @foreach ($devlist as $devlist)
+                            <tr>
+                                <td>{{$devlist->name}}</td>
+                                <td>{{$devlist->amount}}</td>
+                            </tr>
+                            @endforeach
+                            </tbody>
+                        </table>
+                    </div> 
                 </div>
             </div>
         </div>
     </div>
+    <!--ROW2-->
     <div class="card text-center">
         <div class="card-header">
             <ul class="nav nav-tabs card-header-tabs" id="pills-tab" role="tablist">
                 <li class="nav-item">
-                    <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true">Order</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" id="pills-home-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-home" aria-selected="true">Link</a>
-                </li>
+                    <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true">Orders/Year</a></li>
+                <!--<li class="nav-item">
+                    <a class="nav-link" id="pills-home-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-home" aria-selected="false">Supply</a></li>-->
             </ul>
         </div>
         <div class="tab-content" id="pills-tabContent">
-            <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">..dsadsadasdsadad.</div>
-            <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">...dsdadsdsd33333sdasdasd</div>
-            <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">..sadasdasdasdasdasda.</div>
+            <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+                <div class="card-body">
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <td scope="col">Order Date</td> 
+                                <td scope="col">Order: Book ID/Name</td>
+                                <td scope="col">Total Payment</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach ($orderlist as $orderlist)
+                            <tr>
+                                <td>{{$orderlist->date}}</td>
+                                <td>{{$orderlist->bookid}}/{{$orderlist->bookname}}</td>
+                                <td>{{$orderlist->total}}</td>
+                            </tr>
+                            @endforeach
+                        </tbody>
+                    </table>
+                </div> 
+            </div>
+            <!--<div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+                <div class="card-body">
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                             
+                            </tr>
+                        </thead>
+                        <tbody>
+    
+                        </tbody>
+                    </table>
+                </div> 
+            </div>-->
         </div>
-    </div>
-<br><br>
+    </div><br>
 </div>
 @stop

@@ -20,7 +20,6 @@ html,body,h1,h2,h3,h4,h5 {
 #sidebar{
     position:fixed;
     height: 100%;
-    overflow-y: scroll;
 }
 </style>
 
@@ -54,8 +53,4 @@ html,body,h1,h2,h3,h4,h5 {
           });
         });
       });
-
-
-
-
 </script>

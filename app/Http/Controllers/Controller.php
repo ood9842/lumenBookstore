@@ -17,7 +17,7 @@ class Controller extends BaseController
       return view('errors.page');
   }
 
-  public function selltoday()
+  public function overview()
   {
     $devlist = DB::table('sell_details')
         ->join('sell_logs', 'sell_logs.Sell_logs_id', '=', 'sell_details.sell_logs_id')
@@ -27,8 +27,13 @@ class Controller extends BaseController
         ->limit(5)
         ->get();
 
-    return view('home', compact('devlist'));
-      // vardump($devlist);
+    $orderlist = DB::table('supply_details')
+        ->join('supply_logs', 'supply_logs.slogs_id', '=', 'supply_details.slogs_id')
+        ->select(DB::raw('supply_date as date'), DB::raw("SUM(total_payment) as total"), DB::raw('book_id as bookid'),DB::raw('book_name as bookname'))
+        ->groupBy('date')
+        ->get();
+    
+    return view('home', compact('devlist'), compact('orderlist'));
   }
 
   /**
