@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Laravel\Lumen\Routing\Controller as BaseController;
+use Illuminate\Support\Facades\DB;
 
 class Controller extends BaseController
 {
@@ -14,6 +15,17 @@ class Controller extends BaseController
   public function errors()
   {
       return view('errors.page');
+  }
+
+  public function selltoday()
+  {
+    $devlist = DB::table('sell_logs')
+        ->select(DB::raw('sell_date as date'), DB::raw("total_payment as today"))
+        ->orderby('sell_date')
+        ->get();
+
+    return view('home', compact('devlist'));
+      // vardump($devlist);
   }
 
   /**
