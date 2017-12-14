@@ -29,7 +29,7 @@
         <td>{{$person->first_name}}</td>
         <td>{{$person->last_name}}</td>
         <td>
-        <a href="/person/detail/{{$person->P_id}}" class="btn btn-secondary" role="button" aria-pressed="true">Deatail</a>
+        <a href="/person/detail/{{$person->P_id}}" class="btn btn-secondary" role="button" aria-pressed="true">Detail</a>
         <a href="/person/edit/{{$person->P_id}}" class="btn btn-primary" role="button" aria-pressed="true">Edit</a>
         <a href="/person/delete/{{$person->P_id}}" class="btn btn-danger" role="button" aria-pressed="true">Delete</a>
         </td>

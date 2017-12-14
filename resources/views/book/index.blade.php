@@ -37,7 +37,7 @@
         <td>{{$book->published_year}}</td>
         <td>{{$book->price}}</td>
         <td>
-        <a href="/book/detail/{{$book->Book_id}}" class="btn btn-secondary" role="button" aria-pressed="true">Deatail</a>
+        <a href="/book/detail/{{$book->Book_id}}" class="btn btn-secondary" role="button" aria-pressed="true">Detail</a>
         <a href="/book/edit/{{$book->Book_id}}" class="btn btn-primary" role="button" aria-pressed="true">Edit</a>
         <a href="/book/delete/{{$book->Book_id}}" class="btn btn-danger" role="button" aria-pressed="true">Delete</a>
         </td>

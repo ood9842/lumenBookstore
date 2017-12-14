@@ -29,7 +29,7 @@
         <td><a href="/book/detail/{{$book_in_stock->book_id}}">{{$book_in_stock->book_id}}</a></td>
         <td>{{$book_in_stock->amount}}</td>
         <td>
-        <a href="/book_in_stock/detail/{{$book_in_stock->stock_id}}/{{$book_in_stock->book_id}}" class="btn btn-secondary" role="button" aria-pressed="true">Deatail</a>
+        <a href="/book_in_stock/detail/{{$book_in_stock->stock_id}}/{{$book_in_stock->book_id}}" class="btn btn-secondary" role="button" aria-pressed="true">Detail</a>
         <a href="/book_in_stock/edit/{{$book_in_stock->stock_id}}/{{$book_in_stock->book_id}}" class="btn btn-primary" role="button" aria-pressed="true">Edit</a>
         <a href="/book_in_stock/delete/{{$book_in_stock->stock_id}}/{{$book_in_stock->book_id}}" class="btn btn-danger" role="button" aria-pressed="true">Delete</a>
         </td>

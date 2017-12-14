@@ -27,7 +27,7 @@
         <td><a href="/staff/detail/{{$employee->staff_id}}">{{$employee->staff_id}}</a></td>
         <td><a href="/store/detail/{{$employee->store_workON}}">{{$employee->store_workON}}</a></td>
         <td>
-        <a href="/employee/detail/{{$employee->staff_id}}/{{$employee->store_workON}}" class="btn btn-secondary" role="button" aria-pressed="true">Deatail</a>
+        <a href="/employee/detail/{{$employee->staff_id}}/{{$employee->store_workON}}" class="btn btn-secondary" role="button" aria-pressed="true">Detail</a>
         <a href="/employee/edit/{{$employee->staff_id}}/{{$employee->store_workON}}" class="btn btn-primary" role="button" aria-pressed="true">Edit</a>
         <a href="/employee/delete/{{$employee->staff_id}}/{{$employee->store_workON}}" class="btn btn-danger" role="button" aria-pressed="true">Delete</a>
         </td>

@@ -27,7 +27,7 @@
         <td>{{$product_line->Product_line_id}}</td>
         <td><a href="/publisher/detail/{{$product_line->publisher_id}}">{{$product_line->publisher_id}}</a></td>
         <td>
-        <a href="/product_line/detail/{{$product_line->Product_line_id}}" class="btn btn-secondary" role="button" aria-pressed="true">Deatail</a>
+        <a href="/product_line/detail/{{$product_line->Product_line_id}}" class="btn btn-secondary" role="button" aria-pressed="true">Detail</a>
         <a href="/product_line/edit/{{$product_line->Product_line_id}}" class="btn btn-primary" role="button" aria-pressed="true">Edit</a>
         <a href="/product_line/delete/{{$product_line->Product_line_id}}" class="btn btn-danger" role="button" aria-pressed="true">Delete</a>
         </td>
